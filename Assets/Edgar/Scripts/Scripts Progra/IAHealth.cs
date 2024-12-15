@@ -1,13 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-    public class IAHealth : MonoBehaviour
+ public class IAHealth : MonoBehaviour
 
-    {
-        [SerializeField, Range(0, 100)] private int actualHealth;
-        [SerializeField] private int maxHealth;
+ {
+    [SerializeField, Range(0, 100)] private int actualHealth;
+    [SerializeField] private int maxHealth;
 
-        [SerializeField] private ParticleSystem blood;
+    [SerializeField] private ParticleSystem blood;
 
     private void Start()
     {
@@ -15,7 +15,7 @@ using UnityEngine;
     }
 
     public void TakeDamage(int damage)
-        {
+    {
             Debug.Log("El personaje " + name + " recibio daño");
             actualHealth -= damage;
             ParticleSystem bloodEffect = Instantiate(blood, transform.position, Quaternion.identity);
@@ -25,15 +25,16 @@ using UnityEngine;
             {
                 Death();
             }
-        }
+    }
     
 
-        public void Death()
-        {
-            blood.Play();
-            Debug.Log("Mataste a " + name);
-            Destroy(gameObject);
-        }
+    public void Death()
+    {
+
+        blood.Play();
+        Debug.Log("Mataste a " + name);
+        Destroy(gameObject);
+    }
 
          IEnumerator DestroyBlood(ParticleSystem bloodEffect, float delay)
         {

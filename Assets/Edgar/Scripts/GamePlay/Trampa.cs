@@ -9,17 +9,13 @@ public class Trampa : MonoBehaviour
     [SerializeField] float radio;
     [SerializeField] LayerMask layer;
     [SerializeField] CharacterController characterController;
-    VidaPlayer player;
+    [SerializeField] VidaPlayer player;
 
     private void Update()
     {
         if (Deteccion())
         {
-            
-            characterController.enabled = false;
-            transform.position = respawn.position;
-            characterController.enabled = true;
-
+            StartCoroutine(player.SubtractHealth());
         }
     }
 

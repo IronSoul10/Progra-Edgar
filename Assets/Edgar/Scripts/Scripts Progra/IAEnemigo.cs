@@ -12,6 +12,8 @@ public class IAEnemigo : MonoBehaviour
 
     [SerializeField] IAHealth health;
 
+    
+
     void Start()
     {
         origin = transform.position;
@@ -43,6 +45,7 @@ public class IAEnemigo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            AudioManager.AudioInstance.Play("Explosion");
             health.TakeDamage(1);
             Destroy(this.gameObject);
         }

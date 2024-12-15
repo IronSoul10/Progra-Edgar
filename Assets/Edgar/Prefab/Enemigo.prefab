@@ -499,6 +499,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   health: {fileID: 4349529853863131637}
+  explision: {fileID: 0}
 --- !u!1 &4809181097408776912
 GameObject:
   m_ObjectHideFlags: 0

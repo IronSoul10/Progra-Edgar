@@ -3418,6 +3418,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &234768428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4461,6 +4462,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &323396020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5463,6 +5465,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &418898192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8675,6 +8678,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &608406862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10009,6 +10013,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &710193516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10457,6 +10462,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &731109187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15685,6 +15691,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &1082554115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22013,6 +22020,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &1175163550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22518,6 +22526,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &1205888572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24341,6 +24350,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   characterController: {fileID: 1079014385}
+  player: {fileID: 1079014392}
 --- !u!1001 &1348830831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26820,6 +26830,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &1517939731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26993,6 +27004,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   characterController: {fileID: 1079014385}
+  player: {fileID: 1079014392}
 --- !u!1001 &1524039018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28338,6 +28350,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &1626403793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35435,6 +35448,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   characterController: {fileID: 0}
+  player: {fileID: 0}
 --- !u!65 &2027172394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37847,6 +37861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4349529853863131637, guid: 366ee5c1c5815184a8963b91712a3faf, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4533185803599683938, guid: 366ee5c1c5815184a8963b91712a3faf, type: 3}
       propertyPath: m_Name
       value: Enemigo
@@ -37892,8 +37910,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8580938519234427209, guid: 366ee5c1c5815184a8963b91712a3faf, type: 3}
-      propertyPath: radio
-      value: 600
+      propertyPath: explision
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40757,7 +40775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290438153440834652, guid: e995f1d79a36e79468ede077d0c1cb47, type: 3}
       propertyPath: musica.Array.data[5].volumen
-      value: 0.27
+      value: 0.499
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
