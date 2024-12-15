@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Edgar.Inventory
-{
     public class Item1 : MonoBehaviour, IInteractable
     {
         [SerializeField] private SOItem item;
-        private InventoryHandler inventory;
+        private InventoryHandler1 inventory;
 
         private void Start()
         {
-            inventory = FindObjectOfType<InventoryHandler>();
+            inventory = FindObjectOfType<InventoryHandler1>();
         }
 
         public void Interact()
@@ -21,4 +19,4 @@ namespace Edgar.Inventory
         }
 
     }
-}
+

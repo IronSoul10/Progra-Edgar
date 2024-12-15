@@ -1,88 +1,80 @@
 using UnityEngine;
 
-/// <summary>
-/// Un movimiento que requiere fisica se debe de hacer con rigidbody
-/// 
-/// Un movimiento que unicamente es lateral, salto, y ya, Usas CharacterController
-/// 
-/// Un movimiento con Transform puedes hacer de todo, pero requiere más trabajo
-/// 
-/// Inputs
-/// Ridigbody
-/// 3 Velocidades
-/// 
-/// </summary>
-/// 
-namespace Edgar
+
+public class MovementController1 : MonoBehaviour
 {
-    public class MovementController : MonoBehaviour
+    public float runSpeed = 10f;
+    public float crouchSpeed = 3f;
+    public float walkSpeed = 5f;
+    public float jumpForce = 7f; // Añadido: Fuerza del salto
+
+    public Rigidbody rb;
+    private bool isGrounded;
+
+    void Update()
     {
-        public float crouchSpeed = 3;
-        public float walkSpeed = 5;
-        public float runSpeed = 7;
+        Move();
+        Jump();
+    }
 
-        private Rigidbody rb;
+    private void Move()
+    {
+        Vector3 cameraForward = Camera.main.transform.forward;
+        Vector3 cameraRight = Camera.main.transform.right;
 
-        Corrutinas corrutinas;
+        Vector3 moveDirection = (cameraForward * VerticalMove() + cameraRight * HorizontalMove()).normalized;
 
-        private void Awake()
+        rb.velocity = new Vector3(moveDirection.x * ActualSpeed(), rb.velocity.y, moveDirection.z * ActualSpeed());
+    }
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb = GetComponent<Rigidbody>();
-            corrutinas = GetComponent<Corrutinas>();
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+    }
 
-        private void Start()
+    private float ActualSpeed()
+    {
+        return IsRunning() ? runSpeed : IsCrouching() ? crouchSpeed : walkSpeed;
+    }
+
+    private float HorizontalMove()
+    {
+        return Input.GetAxis("Horizontal");
+    }
+
+    private float VerticalMove()
+    {
+        return Input.GetAxis("Vertical");
+    }
+
+    private bool IsRunning()
+    {
+        return Input.GetKey(KeyCode.LeftShift);
+    }
+
+    private bool IsCrouching()
+    {
+        return Input.GetKey(KeyCode.LeftControl);
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
         {
+            isGrounded = true;
         }
+    }
 
-        private void FixedUpdate()
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            Move();
+            isGrounded = false;
         }
-
-        private void Move()
-        {
-            rb.velocity = transform.rotation * new Vector3(HorizontalMove(), 0, VerticalMove()) * ActualSpeed();
-        }
-
-        private float ActualSpeed()
-        {
-            return IsRunning() ? runSpeed : IsCrouching() ? crouchSpeed : walkSpeed; // Operador ternario
-        }
-
-        public float HorizontalMove()
-        {
-            return Input.GetAxis("Horizontal");
-        }
-
-        public float VerticalMove()
-        {
-            return Input.GetAxis("Vertical");
-        }
-
-        public bool IsMoving()
-        {
-            if (HorizontalMove() != 0 || VerticalMove() != 0)
-            {
-                Debug.Log("Me muevo");
-                return true;
-            }
-            else
-            {
-                Debug.Log("No me muevo");
-                return false;
-            }
-        }
-
-        public bool IsRunning()
-        {
-            return Input.GetKey(KeyCode.LeftShift);
-        }
-
-        private bool IsCrouching()
-        {
-            return Input.GetKey(KeyCode.LeftControl);
-        }
-
     }
 }
+
+

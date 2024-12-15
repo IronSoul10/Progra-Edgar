@@ -1,9 +1,6 @@
 using UnityEngine;
 
-
-namespace Edgar
-{
-    public class CameraController : MonoBehaviour
+    public class CameraController1 : MonoBehaviour
     {
 
         [Header("Camera Settings")]
@@ -28,11 +25,11 @@ namespace Edgar
 
         private Vector3 startPos; // Almacena la posicion original de la cabeza
 
-        private MovementController movementController; // Necesitamos esta referencia para saber si el personaje se está moviendo o no
+        public MovementController1 movementController; // Necesitamos esta referencia para saber si el personaje se está moviendo o no
 
         private void Start()
         {
-            movementController = FindObjectOfType<MovementController>();
+            //movementController = FindObjectOfType<MovementController1>();
 
             if (player == null)
             {
@@ -53,7 +50,7 @@ namespace Edgar
             RotateCamera();
 
             if (!moveHead) return;
-            BlobMove();
+            //BlobMove();
             ResetPosition();
         }
 
@@ -81,22 +78,22 @@ namespace Edgar
 
         #region Camera Movement
 
-        private void BlobMove()
-        {
-            if (!movementController.IsMoving())
-            {
-                return;
-            }
+        //private void BlobMove()
+        //{
+        //    if (!movementController.IsMoving())
+        //    {
+        //        return;
+        //    }
 
-            if (movementController.IsMoving() && !movementController.IsRunning())
-            {
-                transform.localPosition += FootStepMotion();
-            }
-            else if (movementController.IsMoving() && movementController.IsRunning())
-            {
-                transform.localPosition += RunningFootStepMotion();
-            }
-        }
+        //    if (movementController.IsMoving() && !movementController.IsRunning())
+        //    {
+        //        transform.localPosition += FootStepMotion();
+        //    }
+        //    else if (movementController.IsMoving() && movementController.IsRunning())
+        //    {
+        //        transform.localPosition += RunningFootStepMotion();
+        //    }
+        //}
 
         private void ResetPosition()
         {
@@ -123,5 +120,3 @@ namespace Edgar
         #endregion
 
     }
-
-}
