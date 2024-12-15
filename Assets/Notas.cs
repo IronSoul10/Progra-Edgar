@@ -1,11 +1,8 @@
-using System;
 using UnityEngine;
 
 
 /// Nombramineto de Scripts
-/// Nomenclatura Pascal Case <summary>
-/// Nombramineto de Scripts
-/// </summary>
+/// Nomenclatura Pascal Case
 public class Notas : MonoBehaviour
 {
     /// Nombramiento de carpetas
@@ -15,10 +12,11 @@ public class Notas : MonoBehaviour
     /// Se usa la nomenclatura Camel Case, la cual indica que la primera letra de la primera palabra en el nombre de la variable
     /// se escribe en minuscula, 
 
-    [SerializeField] private int vidaMaxima; // Este es el nombramiento tipico de variables
+    private int vidaMaxima; // Este es el nombramiento tipico de variables
 
     /// Nombramiento de metodos
     /// Se usa la nomenclatura Pascal Case, la cual indica que la primera letra de cada palabra en el nombre de la variable empieza en Mayuscula
+
     private void MetodoChido()
     {
 
@@ -99,37 +97,4 @@ public class Notas : MonoBehaviour
     {
 
     }
-
-
-    /// <summary>
-    /// CLASES ABSTRACTAS
-    /// 
-    /// Nos permiten heredar codigo y lógica. Ya sea que la lógica pueda ser con definición 
-    /// o no. Tambien puede ser que queramos o no heredar dicha lógica.
-    /// 
-    /// METODOS ABSTRACTOS
-    /// 
-    /// Los metodos abstractos son metodos no contienen una definición o lógica de que es lo que hacen
-    /// sino que le damos forma hasta que llegue el momento de la herencia
-    /// 
-    /// El metodo abstracto lo declaras cuando quieres que cada miembro de la herencia tenga una
-    /// funcion diferente
-    /// 
-    /// El metodo abstracto es obligatorio implementarlo, aun si este tenga o no lógica
-    /// 
-    /// METODO VIRTUAL
-    /// 
-    /// Los metodos virtuales son metodos que pueden o no tener una definicion o lógica de que es lo que hacen.
-    /// Podemos darle forma desde antes de la herencia y escoger si queremos heredar esa lógica
-    /// o darle una nueva
-    /// 
-    /// El metodo virtual puedo o no implementarlo
-    /// 
-    /// INTERFACE
-    /// 
-    /// Es para darle una funcion a un objeto
-    /// 
-    /// </summary>
-    /// 
-
 }

@@ -1,40 +1,45 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-namespace Angie
+/// <summary>
+/// /// EJERCICIO/TAREA
+/// 
+/// Hacer que deje de perseguir al objetivo
+/// </summary>
+public class PerseguirObjetivo : MonoBehaviour
 {
-    /// <summary>
-    /// /// EJERCICIO/TAREA
-    /// 
-    /// Hacer que deje de perseguir al objetivo
-    /// </summary>
-    public class PerseguirObjetivo : MonoBehaviour
+
+
+    public Transform objetivo;
+    public float velocidad;
+    private Deteccion deteccion;
+
+    private NavMeshAgent agent;
+
+    private void Start()
     {
-
-        public Transform objetivo;
-        public float velocidad;
-
-        private NavMeshAgent agent;
-
-        private void Start()
-        {
-            agent = GetComponent<NavMeshAgent>();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void Perseguir()
-        {
-            agent.speed = velocidad;
-            agent.destination = objetivo.position;
-        }
-
+        deteccion = GetComponent<Deteccion>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
+    private void Update()
+    {
+        DejarDePerseguir();
+    }
+
+    public void Perseguir()
+    {
+        agent.speed = velocidad;
+        agent.destination = objetivo.position;
+    }
+
+    public void DejarDePerseguir()
+    {
+        if (agent == null)
+        {
+          agent.destination = transform.position;
+        }
+    }
 }
