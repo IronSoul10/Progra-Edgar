@@ -11,9 +11,12 @@ public class ContadorBajas : MonoBehaviour
     [SerializeField] GameObject openDoor;
     [SerializeField] GameObject closeDoor;
 
+    public InventoryHandler1 inventoryHandler;
+
     private void Start()
     {
         ActualizarContador();
+        inventoryHandler = FindObjectOfType<InventoryHandler1>();
         
     }
 
@@ -22,7 +25,6 @@ public class ContadorBajas : MonoBehaviour
         Salida();
       
     }
-   
    
     public void BajasActuales()
     {
@@ -36,7 +38,7 @@ public class ContadorBajas : MonoBehaviour
 
    public void Salida()
     {
-        if (numeroBajas >= objetivoBajas) 
+        if (inventoryHandler.inventory.Count >= 6) 
         {
             Debug.Log("Se Acabo");
             openDoor.SetActive(true);
@@ -44,6 +46,7 @@ public class ContadorBajas : MonoBehaviour
             
         }
     }
+    
 
     
 

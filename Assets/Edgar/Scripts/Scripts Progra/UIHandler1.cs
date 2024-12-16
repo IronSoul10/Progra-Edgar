@@ -1,89 +1,131 @@
 using System;
 using UnityEngine;
 
-    public class UIHandler1 : MonoBehaviour
-    {
+public class UIHandler1 : MonoBehaviour
+{
         [SerializeField] private GameObject inventoryCanvas;
         [SerializeField] private GameObject uiItemPrefab;
         [SerializeField] private GameObject displayArea;
-        [SerializeField] private Page[] pages = new Page[3]; // 24 items
+        [SerializeField] private Page[] pages = new Page[4];
 
         public int actualPage = 0;
-        private int maxItemsPerPage = 8;
-
-        private InventoryHandler1 inventoryRef;
-
-        private int nuevoObjeto;
+        private int maxItemsPerPage = 2;
+        private int actualItems = 0;
+        [SerializeField] private InventoryHandler1 inventoryRef;
 
         public bool inventoryOpened = false;
 
         private void Awake()
-        {          
+        {
             inventoryRef = FindAnyObjectByType<InventoryHandler1>();
 
-            for(int i= 0; i<pages.Length; i++)
+            for (int i = 0; i < pages.Length; i++)
             {
                 pages[i].items = new GameObject[maxItemsPerPage];
                 pages[i].itemsDeployed = 0;
             }
         }
 
-        // Update is called once per frame
-        void Update()
+
+    void Update()
+    {
+
+
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            if (Input.GetKeyDown(KeyCode.I)) // Abrir inventario
+            OpenInventory();
+        }
+
+        if (inventoryOpened)
+        {
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                OpenInventory();
+                PaginaSiguiente();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                PaginaAnterior();
             }
         }
+    }
+
+
 
         private void OpenInventory()
         {
+
             inventoryOpened = !inventoryOpened;
             inventoryCanvas.SetActive(inventoryOpened);
 
-            if (inventoryRef.inventory.Count <= 0) // Revisa si hay cosas en el inventario
+            if (inventoryOpened)
             {
-                // Si no hay nada, aquí termina
-                return;
-            }
-            else
-            {
-                HideAllItems(); 
-                pages[actualPage].itemsDeployed = 0; 
+                actualPage = 0;
+                HideAllItems();
+                ShowItems(actualPage);
 
-                for (int i = 0; i < inventoryRef.inventory.Count; i++) // Recorremos toda la lista de items del inventario
+                if (inventoryRef.inventory.Count <= 0)
                 {
-                    // Solo añadimos el item si no está duplicado en la página actual
-                    if (i >= pages[actualPage].itemsDeployed && pages[actualPage].itemsDeployed < maxItemsPerPage)
+                    // Si no hay nada, aqui termina
+                    return;
+                }
+
+                else if (inventoryRef.inventory.Count > actualItems) // Revisamos que no cambie la cantidad de items
+                {
+
+
+                    for (int i = GetTotalItemsDeployed(); i < inventoryRef.inventory.Count; i++) // Tenemos 1 item
                     {
                         GameObject item = Instantiate(uiItemPrefab); // Creo un item en el canvas
                         item.transform.SetParent(displayArea.transform); // Lo emparento al area del libro/display/area util
-                        item.transform.localScale = Vector3.one; // le pongo la escala en 1 por que a veces sale de diferente tamaño no se porque
-                        item.GetComponent<ItemUI>().SetItemInfo(inventoryRef.inventory[i]); // le asigno la información
+                        item.transform.localScale = Vector3.one; // le pongo la escala en 1 por que a veces sale de diferente tamaÃ±o no se porque
+                        item.GetComponent<ItemUI>().SetItemInfo(inventoryRef.inventory[i]); // le asigno la informacion
                         pages[actualPage].items[pages[actualPage].itemsDeployed] = item; // guardo el item en la posicion correspondiente de la pagina actual
-                        // pages[actualPage].items estoy accediendo a mi arreglo de items en mi pagina actual
-                        // items[pages[actualPage].itemsDeployed] estoy accediendo al item que sigue, es decir, donde voy a guardar mi item
+                                                                                         // pages[actualPage].items estoy accediendo a mi arreglo de items en mi pagina actual
+                                                                                         // items[pages[actualPage].itemsDeployed] estoy accediendo al item que sigue, es decir, donde voy a guardar mi item
                         pages[actualPage].itemsDeployed++; // 8
 
-                        if (pages[actualPage].itemsDeployed < maxItemsPerPage)
+                        if (pages[actualPage].itemsDeployed >= maxItemsPerPage) // Si ya alcance mi capacidad maxima de items en mi pagina actual
                         {
-                            pages[actualPage].items[pages[actualPage].itemsDeployed] = item;
-                            pages[actualPage].itemsDeployed++;
-                            nuevoObjeto++;
-                        }
-                        else if (actualPage < pages.Length - 1)
-                        {
-                            actualPage++;
+                            actualPage++; // paso a la siguiente pagina
                         }
                     }
+
+                    actualItems = inventoryRef.inventory.Count; // Registramos la cantidad de items actuales
+                    HideAllItems();
+                    ShowItems(actualPage);
+
+
                 }
 
+                else
+                {
+                    HideAllItems();
+                    ShowItems(actualPage);
+                }
+            }
+
+        }
+
+        void PaginaSiguiente()
+        {
+            if (actualPage < pages.Length - 1)
+            {
+                HideItems(actualPage);
+                actualPage++;
                 ShowItems(actualPage);
             }
         }
 
-
+        private void PaginaAnterior()
+        {
+            if (actualPage > 0)
+            {
+                HideItems(actualPage);
+                actualPage--;
+                ShowItems(actualPage);
+            }
+        }
 
         [ContextMenu("Show Items in Page")]
         private void ShowItems()
@@ -124,10 +166,10 @@ using UnityEngine;
         [ContextMenu("Hide All Items")]
         private void HideAllItems()
         {
-            for(int page = 0; page <= actualPage; page++) // Este for recorre las paginas
+            for (int page = 0; page <= actualPage; page++) // Este for recorre las paginas
             {
                 Debug.Log(page);
-                for(int item = 0; item < pages[page].itemsDeployed; item++)
+                for (int item = 0; item < pages[page].itemsDeployed; item++)
                 {
                     Debug.Log(item);
                     pages[page].items[item].SetActive(false);
@@ -135,7 +177,16 @@ using UnityEngine;
                 Debug.Log("Siguiente pagina");
             }
         }
-        
+
+        private int GetTotalItemsDeployed()
+        {
+            int items = 0;
+            for (int i = 0; i < pages.Length; i++)
+            {
+                items += pages[i].itemsDeployed;
+            }
+            return items;
+        }
     }
 
     [Serializable]
@@ -144,8 +195,5 @@ using UnityEngine;
         public int itemsDeployed;
         public GameObject[] items; // en este arreglo me guarda los 8 items que pertenecen a esa pagina
     }
-
-
-
 
 

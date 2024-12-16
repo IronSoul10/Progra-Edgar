@@ -16,5 +16,6 @@ using UnityEngine.UI;
             newItemImage.sprite = item.sprite;
         }
 
+
     }
 
