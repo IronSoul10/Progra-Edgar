@@ -28390,7 +28390,7 @@ MonoBehaviour:
   smoothnes: 1
   minAngleY: -90
   maxAngleY: 90
-  moveHead: 1
+  moveHead: 0
   walkingSpeed: 0
   runningSpeed: 0
   amplitude: 0
