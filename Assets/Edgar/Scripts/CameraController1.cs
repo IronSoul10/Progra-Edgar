@@ -37,7 +37,7 @@ using UnityEngine;
             }
             else
             {
-                Debug.Log("No hay jugador");
+               
             }
 
             Cursor.lockState = CursorLockMode.Locked;

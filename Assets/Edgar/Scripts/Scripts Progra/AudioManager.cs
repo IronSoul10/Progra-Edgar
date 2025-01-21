@@ -37,12 +37,12 @@ public class AudioManager : MonoBehaviour
         {
             if (s.nombre == nombre)
             {
-                Debug.Log("Now playing: " + nombre);
+                
                 s.source.Play();
                 return;
             }
 
-            Debug.Log("No sound dected");
+          
         }
     }
 
@@ -52,12 +52,11 @@ public class AudioManager : MonoBehaviour
         {
             if (s.nombre == nombre)
             {
-                Debug.Log("Now stoping: " + nombre);
                 s.source.Stop();
                 return;
             }
 
-            Debug.Log("No sound dected");
+             
         }
     }
 }

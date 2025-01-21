@@ -15,7 +15,7 @@ public class Door : MonoBehaviour, IInteractable
     // MultiplesLlaves
     [SerializeField] private SOItem[] keys;
 
-    [SerializeField] LayerMask layer;
+   [SerializeField] Animation anim;
 
 
     private InventoryHandler1 inventoryHandler;
@@ -23,6 +23,10 @@ public class Door : MonoBehaviour, IInteractable
     private void Awake()
     {
         inventoryHandler = FindObjectOfType<InventoryHandler1>();
+    }
+    private void Start()
+    {
+        anim.Stop();
     }
 
     public void Interact()
@@ -72,9 +76,9 @@ public class Door : MonoBehaviour, IInteractable
 
     private void Automatica()
     {
-       if(Touch())
+        if(Touch())
         {
-            Debug.Log("Se abre automaticamente");
+            anim.Play();
         }
     }
 
@@ -90,24 +94,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private void MultiplesLlaves()
     {
-        bool allKeysPresent = true;
-        foreach (var key in keys)
-        {
-            if (!inventoryHandler.inventory.Contains(key))
-            {
-                allKeysPresent = false;
-                break;
-            }
-        }
 
-        if (allKeysPresent)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Debug.Log("No tienes las multiples llaves");
-        }
     }
 
 
@@ -124,17 +111,14 @@ public class Door : MonoBehaviour, IInteractable
     }
 
 
-    private void OnTriggerEnter(Collider other)
+   bool Touch()
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Jugador entrando");
-        }
+        return Physics.CheckSphere(transform.position, 4f, LayerMask.GetMask("Player"));
     }
-
-    bool Touch()
+    private void OnDrawGizmos()
     {
-        return Physics.CheckSphere(transform.position, 5f, layer);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 4f);
     }
 
 }
@@ -144,3 +128,4 @@ public enum TipoDePuerta
 {
     Automatica, Normal, DeLlave, Evento, MultiplesLlaves
 }
+

@@ -15,7 +15,7 @@ public class InteractionHandler : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, transform.forward * range, out target, range, detection))
             {
-                if (Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     target.collider.GetComponent<IInteractable>().Interact();
                 }
