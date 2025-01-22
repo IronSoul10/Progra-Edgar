@@ -20,6 +20,6 @@ public class TomarArma : MonoBehaviour
     }
     bool Take()
     {
-        return Input.GetKeyDown(KeyCode.E);
+        return Input.GetKeyDown(KeyCode.P);
     }
 }

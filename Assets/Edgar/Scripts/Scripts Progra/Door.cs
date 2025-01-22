@@ -1,22 +1,14 @@
 
+using System.Collections;
 using UnityEngine;
 
 // Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
 public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private TipoDePuerta tipoDePuerta;
-
-    //Evento
     [SerializeField] private bool eventoActivado;
-
-    // Llave
     [SerializeField] private SOItem key;
-
-    // MultiplesLlaves
     [SerializeField] private SOItem[] keys;
-
-   [SerializeField] Animation anim;
-
 
     private InventoryHandler1 inventoryHandler;
 
@@ -24,48 +16,36 @@ public class Door : MonoBehaviour, IInteractable
     {
         inventoryHandler = FindObjectOfType<InventoryHandler1>();
     }
-    private void Start()
+    private void Update()
     {
-        anim.Stop();
+        Automatica();
     }
 
     public void Interact()
     {
-
         switch (tipoDePuerta)
         {
-            case TipoDePuerta.Automatica:
-                {
-                    Automatica();
-                    Debug.Log("Se abre automaticamente");
-                    break;
-                }
-
             case TipoDePuerta.Normal:
                 {
                     Normal();
-                    Debug.Log("Se abre");
                     break;
                 }
 
             case TipoDePuerta.DeLlave:
                 {
                     DeLlave();
-                    Debug.Log("Se abre con llave");
                     break;
                 }
 
             case TipoDePuerta.Evento:
                 {
                     Evento();
-                    Debug.Log("Se abre con evento");
                     break;
                 }
 
             case TipoDePuerta.MultiplesLlaves:
                 {
                     MultiplesLlaves();
-                    Debug.Log("Se abre con multiples llaves");
                     break;
                 }
         }
@@ -73,35 +53,50 @@ public class Door : MonoBehaviour, IInteractable
 
     }
 
-
     private void Automatica()
     {
-        if(Touch())
+        if (tipoDePuerta == TipoDePuerta.Automatica && Touch())
         {
-            anim.Play();
+            StartCoroutine(OpenDoorAutomatic());
         }
     }
-
     private void Normal()
     {
-
+        Debug.Log("Se abre");
+        StartCoroutine(NormalOpen());
     }
-
     private void Evento()
     {
-
+        if (eventoActivado)
+        {
+            Debug.Log("Se ha activado el evento");
+            StartCoroutine(NormalOpen());
+        }
+        else
+        {
+            Debug.Log("No se ha activado el evento");
+        }
     }
-
     private void MultiplesLlaves()
     {
-
+        foreach (SOItem item in keys)
+        {
+            if (inventoryHandler.inventory.Contains(item))
+            {
+                Debug.Log("Se abrio con multiples llaves");
+                StartCoroutine(NormalOpen());
+            }
+            else
+            {
+                Debug.Log("No tienes las llaves");
+            }
+        }
     }
-
-
     private void DeLlave()
     {
         if (inventoryHandler.inventory.Contains(key))
         {
+            Debug.Log("Se abrio con 1 llave");
             Destroy(gameObject);
         }
         else
@@ -111,7 +106,8 @@ public class Door : MonoBehaviour, IInteractable
     }
 
 
-   bool Touch()
+
+    bool Touch()
     {
         return Physics.CheckSphere(transform.position, 4f, LayerMask.GetMask("Player"));
     }
@@ -120,9 +116,20 @@ public class Door : MonoBehaviour, IInteractable
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, 4f);
     }
+    IEnumerator OpenDoorAutomatic()
+    {
+        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
+        Debug.Log("Se abre automaticamente");
+        yield return new WaitForSeconds(2f);
+        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.down * 2f, 2f);
 
+    }
+    IEnumerator NormalOpen()
+    {
+        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
+        yield return new WaitForSeconds(2f);
+    }
 }
-
 
 public enum TipoDePuerta
 {

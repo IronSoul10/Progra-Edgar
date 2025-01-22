@@ -24,7 +24,7 @@ public class InteractionHandler : MonoBehaviour
 
         protected void OnDrawGizmos()
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.green;
             Gizmos.DrawRay(transform.position, transform.forward * range);
         }
     }
