@@ -7156,7 +7156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5e44cb9611f1c4b8efa5eeb50a8e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePuerta: 0
+  tipoDePuerta: 2
   eventoActivado: 0
   key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
   keys: []
@@ -19399,12 +19399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5e44cb9611f1c4b8efa5eeb50a8e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePuerta: 0
+  tipoDePuerta: 3
   eventoActivado: 0
-  key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  keys:
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  key: {fileID: 0}
+  keys: []
 --- !u!1 &1270099356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -20083,10 +20081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePuerta: 0
   eventoActivado: 0
-  key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  keys:
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  key: {fileID: 0}
+  keys: []
 --- !u!1 &1342910337
 GameObject:
   m_ObjectHideFlags: 0
@@ -25929,12 +25925,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5e44cb9611f1c4b8efa5eeb50a8e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipoDePuerta: 0
+  tipoDePuerta: 1
   eventoActivado: 0
-  key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  keys:
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
-  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  key: {fileID: 0}
+  keys: []
 --- !u!1 &1789360450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -30560,8 +30554,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipoDePuerta: 4
   eventoActivado: 0
-  key: {fileID: 0}
-  keys: []
+  key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  keys:
+  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
 --- !u!65 &2139982993
 BoxCollider:
   m_ObjectHideFlags: 0
