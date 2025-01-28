@@ -5,10 +5,10 @@ using UnityEngine;
 // Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] private TipoDePuerta tipoDePuerta;
-    [SerializeField] private bool eventoActivado;
-    [SerializeField] private SOItem key;
-    [SerializeField] private SOItem[] keys;
+    [SerializeField] public TipoDePuerta tipoDePuerta;
+    [SerializeField] public bool eventoActivado;
+    [SerializeField] public SOItem key;
+    [SerializeField] public SOItem[] keys;
 
     private InventoryHandler1 inventoryHandler;
 
