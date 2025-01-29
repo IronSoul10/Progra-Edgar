@@ -6,7 +6,7 @@ public class SOItem : ScriptableObject
 
     public GameObject itemPrefab;
     public Sprite sprite;
-    public new string name;
+    public  string names;
     public string description;
     public string cantidad;
 

@@ -1,4 +1,5 @@
-using UnityEditor; // Contiene todo lo que necesitamos para modificar el editor de unity
+using UnityEditor;
+using UnityEngine; // Contiene todo lo que necesitamos para modificar el editor de unity
 
 #if UNITY_EDITOR // Indica que solo se compila si estas en el editor de unity
 
@@ -21,6 +22,7 @@ public class CIDoor : Editor
         EditorGUILayout.LabelField(descripcion);
         _door.tipoDePuerta = (TipoDePuerta)EditorGUILayout.EnumPopup("Door Type", _door.tipoDePuerta);
 
+
         switch (_door.tipoDePuerta)
         {
 
@@ -42,6 +44,13 @@ public class CIDoor : Editor
                 {
                     keysProperty = serializedObject.FindProperty("keys");
                     EditorGUILayout.PropertyField(keysProperty, true);
+
+                    for (int i = 0; i < _door.keys.Length; i++)
+                    {
+
+                        //_door.keys[i].sprite.;
+                    }
+
                     descripcion = "Esta puerta requiere de multiples llaves para abrirse. Indica en el arreglo cuantas llaves necesita y cuales";
                     serializedObject.ApplyModifiedProperties();
                     break;

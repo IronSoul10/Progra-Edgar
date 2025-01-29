@@ -11,7 +11,7 @@ using UnityEngine.UI;
         public void AddItem(SOItem item)
         {
             inventory.Add(item);
-            Debug.Log("Se ha añadido " + item.name + " a tu inventario");
+            Debug.Log("Se ha añadido " + item.names + " a tu inventario");
             Debug.Log("Descripcion: " + item.description);
             newItemImage.sprite = item.sprite;
         }

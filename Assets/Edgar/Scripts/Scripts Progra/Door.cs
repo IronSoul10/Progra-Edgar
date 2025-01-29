@@ -11,6 +11,7 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] public SOItem[] keys;
 
     private InventoryHandler1 inventoryHandler;
+    internal Texture2D names;
 
     private void Awake()
     {

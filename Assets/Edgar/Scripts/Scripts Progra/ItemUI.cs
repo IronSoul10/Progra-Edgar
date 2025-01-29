@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
        public void SetItemInfo(SOItem item)
        {
-                itemName.text = item.name;
+                itemName.text = item.names;
                 itemDescription.text = item.description;
                 itemImage.sprite = item.sprite;
        }
