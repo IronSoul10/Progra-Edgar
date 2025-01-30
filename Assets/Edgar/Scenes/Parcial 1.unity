@@ -30556,8 +30556,11 @@ MonoBehaviour:
   eventoActivado: 0
   key: {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
   keys:
+  - {fileID: 11400000, guid: 55931a587478b8d42b64870c3e7a601b, type: 2}
   - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
   - {fileID: 11400000, guid: 5c50868a9c9bd7e40a0db38ce3d007ee, type: 2}
+  - {fileID: 11400000, guid: fa24fa801ec7ba4488d90f3319589f75, type: 2}
+  - {fileID: 11400000, guid: 3f0eba93c4d411747b6e4a8289271232, type: 2}
 --- !u!65 &2139982993
 BoxCollider:
   m_ObjectHideFlags: 0

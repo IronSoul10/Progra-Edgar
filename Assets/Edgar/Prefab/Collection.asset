@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 2728717945594643306, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
   sprite: {fileID: 21300000, guid: c4d3a7d56b817c646bb313b93e3c0c4b, type: 3}
-  name: Llave
+  names: Coleccion
   description: Abro Cosas
   cantidad: 1

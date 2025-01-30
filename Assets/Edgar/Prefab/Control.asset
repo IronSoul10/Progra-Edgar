@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Control
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7413468920505536649, guid: b36725374af18db4da2e1de74acf29ba, type: 3}
-  sprite: {fileID: 0}
-  name: Control
-  description: 
+  sprite: {fileID: 21300000, guid: 42b469df89c9d394098dc34938c39b6e, type: 3}
+  names: Control
+  description: si
   cantidad: 1

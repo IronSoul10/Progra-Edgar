@@ -1,4 +1,5 @@
 using UnityEditor;
+using UnityEditor.U2D;
 using UnityEngine; // Contiene todo lo que necesitamos para modificar el editor de unity
 
 #if UNITY_EDITOR // Indica que solo se compila si estas en el editor de unity
@@ -47,14 +48,23 @@ public class CIDoor : Editor
 
                     for (int i = 0; i < _door.keys.Length; i++)
                     {
+                        GUILayout.Label(_door.keys[i].name);
+                        if (_door.keys[i].sprite != null)
+                        {
+                            GUILayout.Label(_door.keys[i].sprite.texture, GUILayout.Width(80), GUILayout.Height(80));
 
-                        //_door.keys[i].sprite.;
+                        }
+                        else
+                        {
+                            GUILayout.Label("No hay sprite");
+                        }
                     }
 
                     descripcion = "Esta puerta requiere de multiples llaves para abrirse. Indica en el arreglo cuantas llaves necesita y cuales";
                     serializedObject.ApplyModifiedProperties();
                     break;
                 }
+
 
             case TipoDePuerta.Automatica:
                 {

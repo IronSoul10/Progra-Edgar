@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cuerda
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 7413468920505536649, guid: b36725374af18db4da2e1de74acf29ba, type: 3}
-  sprite: {fileID: 0}
-  name: Cuerda
-  description: 
+  sprite: {fileID: 21300000, guid: a7436920a0b357b49bf9548b7f432564, type: 3}
+  names: Cuerda
+  description: yupi
   cantidad: 1
