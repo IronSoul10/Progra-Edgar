@@ -30,6 +30,7 @@ public class CIDoor : Editor
             case TipoDePuerta.DeLlave:
                 {
                     _door.key = (SOItem)EditorGUILayout.ObjectField("Llave", _door.key, typeof(SOItem), false) as SOItem;
+                    GUILayout.Label(_door.key.sprite.texture, GUILayout.Width(80), GUILayout.Height(80));
                     descripcion = "Esta puerta requiere de una llave para abrirse. Arrastra un objeto de tipo Item al campo";
                     break;
                 }
