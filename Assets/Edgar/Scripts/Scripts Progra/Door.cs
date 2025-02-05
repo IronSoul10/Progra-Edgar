@@ -1,6 +1,8 @@
 
 using System.Collections;
 using UnityEngine;
+namespace Door
+{ 
 
 // Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
 public class Door : MonoBehaviour, IInteractable
@@ -9,6 +11,7 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] public bool eventoActivado;
     [SerializeField] public SOItem key;
     [SerializeField] public SOItem[] keys;
+    [SerializeField] public bool showKeysNames;
 
     private InventoryHandler1 inventoryHandler;
     internal Texture2D names;
@@ -135,5 +138,6 @@ public class Door : MonoBehaviour, IInteractable
 public enum TipoDePuerta
 {
     Automatica, Normal, DeLlave, Evento, MultiplesLlaves
+}
 }
 

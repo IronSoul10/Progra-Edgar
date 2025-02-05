@@ -6,7 +6,7 @@ public class MovementController1 : MonoBehaviour
     public float runSpeed = 10f;
     public float crouchSpeed = 3f;
     public float walkSpeed = 5f;
-    public float jumpForce = 7f; // Añadido: Fuerza del salto
+    public float jumpForce = 7f; // Aï¿½adido: Fuerza del salto
 
     public Rigidbody rb;
     private bool isGrounded;
@@ -24,7 +24,7 @@ public class MovementController1 : MonoBehaviour
 
         Vector3 moveDirection = (cameraForward * VerticalMove() + cameraRight * HorizontalMove()).normalized;
 
-        rb.velocity = new Vector3(moveDirection.x * ActualSpeed(), rb.velocity.y, moveDirection.z * ActualSpeed());
+        rb.linearVelocity = new Vector3(moveDirection.x * ActualSpeed(), rb.linearVelocity.y, moveDirection.z * ActualSpeed());
     }
     private void Jump()
     {

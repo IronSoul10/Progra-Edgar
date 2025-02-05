@@ -1,88 +1,133 @@
 using UnityEditor;
-using UnityEditor.U2D;
+using UnityEngine.SceneManagement;
 using UnityEngine; // Contiene todo lo que necesitamos para modificar el editor de unity
+namespace Door
+{
 
 #if UNITY_EDITOR // Indica que solo se compila si estas en el editor de unity
 
-[CustomEditor(typeof(Door))] // Este script es de custom editor, y modificara los scripts de tipo Door
-public class CIDoor : Editor
-{
-
-    private Door _door; // Esta referencia la vamos a usar para nosotros poder escribir las variables que existen en el script de puerta
-    SerializedProperty keysProperty;
-    private string descripcion;
-
-
-    private void OnEnable() // OnEnable se ejecuta cuando se activa un objeto en la escena // Se activa, al tener ese script en el inspector, exclusivamente de el objeto seleccionado
+    [CustomEditor(typeof(Door))] // Este script es de custom editor, y modificara los scripts de tipo Door
+    [CanEditMultipleObjects]
+    public class CIDoor : Editor
     {
-        _door = (Door)target;
-    }
 
-    public override void OnInspectorGUI() // Este metodo sobreescribe TODOS los valores de el inspector 
-    {
-        EditorGUILayout.LabelField(descripcion);
-        _door.tipoDePuerta = (TipoDePuerta)EditorGUILayout.EnumPopup("Door Type", _door.tipoDePuerta);
+        private Door _door; // Esta referencia la vamos a usar para nosotros poder escribir las variables que existen en el script de puerta
+        private string descripcion; // Es para poner hasta arriba de el inspector una descripcion de como funciona cada puerta
+        private bool foldKeysNames = false; // Es un booleano para hacer foldout a caracteristicas de ciertos objetos
+        private SerializedProperty multipleKeys; // Propiedad para acceder a el arreglo de "keys" en el script de Door
 
-
-        switch (_door.tipoDePuerta)
+        private void OnEnable() // OnEnable se ejecuta cuando se activa un objeto en la escena // Se activa, al tener ese script en el inspector, exclusivamente de el objeto seleccionado
         {
+            _door = (Door)target;
+            multipleKeys = serializedObject.FindProperty("keys");
+        }
 
-            case TipoDePuerta.DeLlave:
-                {
-                    _door.key = (SOItem)EditorGUILayout.ObjectField("Llave", _door.key, typeof(SOItem), false) as SOItem;
-                    GUILayout.Label(_door.key.sprite.texture, GUILayout.Width(80), GUILayout.Height(80));
-                    descripcion = "Esta puerta requiere de una llave para abrirse. Arrastra un objeto de tipo Item al campo";
-                    break;
-                }
+        public override void OnInspectorGUI() // Este metodo sobreescribe TODOS los valores de el inspector 
+        {
+            serializedObject.Update();
+            EditorGUILayout.LabelField(descripcion);
+            InspectorLines();
+            Spaces(2);
 
-            case TipoDePuerta.Evento:
-                {
-                    descripcion = "Esta puerta requiere que se cumpla un evento para poderse abrir";
-                    _door.eventoActivado = EditorGUILayout.Toggle("Se puede abrir?", _door.eventoActivado);
-                    break;
-                }
+            _door.tipoDePuerta = (TipoDePuerta)EditorGUILayout.EnumPopup("Door Type", _door.tipoDePuerta);
 
-            case TipoDePuerta.MultiplesLlaves:
-                {
-                    keysProperty = serializedObject.FindProperty("keys");
-                    EditorGUILayout.PropertyField(keysProperty, true);
+            Spaces(2);
 
-                    for (int i = 0; i < _door.keys.Length; i++)
+            switch (_door.tipoDePuerta)
+            {
+
+                case TipoDePuerta.DeLlave:
                     {
-                        GUILayout.Label(_door.keys[i].name);
-                        if (_door.keys[i].sprite != null)
-                        {
-                            GUILayout.Label(_door.keys[i].sprite.texture, GUILayout.Width(80), GUILayout.Height(80));
-
-                        }
-                        else
-                        {
-                            GUILayout.Label("No hay sprite");
-                        }
+                        descripcion = "Esta puerta requiere de una llave para abrirse. Arrastra un objeto de tipo Item al campo";
+                        _door.key = EditorGUILayout.ObjectField("Llave Requerida", _door.key, typeof(SOItem), false) as SOItem;
+                        break;
                     }
 
-                    descripcion = "Esta puerta requiere de multiples llaves para abrirse. Indica en el arreglo cuantas llaves necesita y cuales";
-                    serializedObject.ApplyModifiedProperties();
-                    break;
-                }
+                case TipoDePuerta.Evento:
+                    {
+                        descripcion = "Esta puerta requiere que se cumpla un evento para poderse abrir";
+                        _door.eventoActivado = EditorGUILayout.Toggle("Se puede abrir?", _door.eventoActivado);
+                        break;
+                    }
+
+                case TipoDePuerta.MultiplesLlaves:
+                    {
+                        descripcion = "Esta puerta requiere de multiples llaves para abrirse. Indica en el arreglo cuantas llaves necesita y cuales";
+                        EditorGUILayout.PropertyField(multipleKeys, new GUIContent("Llaves Requeridas"), true);
 
 
-            case TipoDePuerta.Automatica:
-                {
-                    descripcion = "Esta puerta se abre cuando te acercas";
-                    break;
-                }
+                        if (_door.showKeysNames == true) // showKeysNames es un bool que se encuentra en el script de Door
+                        {
+                            foldKeysNames = EditorGUILayout.Foldout(foldKeysNames, "Keys"); // foldKeysNames esta escrito en este script hasta arriba
+                            if (foldKeysNames)
+                            {
+                                for (int i = 0; i < _door.keys.Length; i++)
+                                {
+                                    if (_door.keys[i] != null)
+                                    {
+                                        EditorGUILayout.LabelField(i + ".- " + _door.keys[i].name);
+                                        Texture2D imagen = _door.keys[i].sprite.texture;
+                                        EditorGUILayout.LabelField(new GUIContent(imagen), GUILayout.Width(50), GUILayout.Height(50));
 
-            case TipoDePuerta.Normal:
-                {
-                    descripcion = "Esta puerta se abre manualmente";
-                    break;
-                }
+                                    }
+                                    else
+                                    {
+                                        EditorGUILayout.LabelField(i + ".- Este espacio esta vacio");
+                                    }
+                                }
+                            }
+                        }
 
+
+                        break;
+                    }
+
+                case TipoDePuerta.Automatica:
+                    {
+                        descripcion = "Esta puerta se abre cuando te acercas";
+                        break;
+                    }
+
+                case TipoDePuerta.Normal:
+                    {
+                        descripcion = "Esta puerta se abre manualmente";
+                        break;
+                    }
+
+
+            }
+            serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+
+        private void Spaces(int spaces)
+        {
+            for (int i = 0; i < spaces; i++)
+            {
+                EditorGUILayout.Space();
+            }
+        }
+
+        private void InspectorLines()
+        {
+            EditorGUILayout.LabelField(WidthLines());
+        }
+
+        string lines;
+        private string WidthLines()
+        {
+            lines = string.Empty;
+
+            for (int i = 0; i < EditorGUIUtility.currentViewWidth; i++)
+            {
+                lines += "-";
+            }
+
+            return lines;
         }
 
     }
 
-}
-
 #endif
+}
