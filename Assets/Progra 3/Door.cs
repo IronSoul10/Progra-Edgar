@@ -1,6 +1,7 @@
 
 using System.Collections;
 using UnityEngine;
+
 namespace Door
 { 
 
@@ -16,7 +17,8 @@ public class Door : MonoBehaviour, IInteractable
     private InventoryHandler1 inventoryHandler;
     internal Texture2D names;
 
-    private void Awake()
+        [System.Obsolete]
+        private void Awake()
     {
         inventoryHandler = FindObjectOfType<InventoryHandler1>();
     }

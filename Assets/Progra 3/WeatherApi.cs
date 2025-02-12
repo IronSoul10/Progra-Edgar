@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using SimpleJSON;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.RendererUtils;
+using UnityEngine.Rendering.Universal;
 
 public class WeatherApi : MonoBehaviour
 {
