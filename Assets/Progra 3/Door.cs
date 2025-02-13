@@ -3,143 +3,150 @@ using System.Collections;
 using UnityEngine;
 
 namespace Door
-{ 
-
-// Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
-public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] public TipoDePuerta tipoDePuerta;
-    [SerializeField] public bool eventoActivado;
-    [SerializeField] public SOItem key;
-    [SerializeField] public SOItem[] keys;
-    [SerializeField] public bool showKeysNames;
 
-    private InventoryHandler1 inventoryHandler;
-    internal Texture2D names;
+    // Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
+    public class Door : MonoBehaviour, IInteractable
+    {
+        [SerializeField] public TipoDePuerta tipoDePuerta;
+        [SerializeField] public bool eventoActivado;
+        [SerializeField] public SOItem key;
+        [SerializeField] public SOItem[] keys;
+        [SerializeField] public bool showKeysNames;
+
+        private InventoryHandler1 inventoryHandler;
+        internal Texture2D names;
 
         [System.Obsolete]
         private void Awake()
-    {
-        inventoryHandler = FindObjectOfType<InventoryHandler1>();
-    }
-    private void Update()
-    {
-        Automatica();
-    }
-
-    public void Interact()
-    {
-        switch (tipoDePuerta)
         {
-            case TipoDePuerta.Normal:
-                {
-                    Normal();
-                    break;
-                }
-
-            case TipoDePuerta.DeLlave:
-                {
-                    DeLlave();
-                    break;
-                }
-
-            case TipoDePuerta.Evento:
-                {
-                    Evento();
-                    break;
-                }
-
-            case TipoDePuerta.MultiplesLlaves:
-                {
-                    MultiplesLlaves();
-                    break;
-                }
+            inventoryHandler = FindObjectOfType<InventoryHandler1>();
+        }
+        private void Update()
+        {
+            Automatica();
         }
 
-
-    }
-
-    private void Automatica()
-    {
-        if (tipoDePuerta == TipoDePuerta.Automatica && Touch())
+        public void Interact()
         {
-            StartCoroutine(OpenDoorAutomatic());
+            switch (tipoDePuerta)
+            {
+                case TipoDePuerta.Normal:
+                    {
+                        Normal();
+                        break;
+                    }
+
+                case TipoDePuerta.DeLlave:
+                    {
+                        DeLlave();
+                        break;
+                    }
+
+                case TipoDePuerta.Evento:
+                    {
+                        Evento();
+                        break;
+                    }
+
+                case TipoDePuerta.MultiplesLlaves:
+                    {
+                        MultiplesLlaves();
+                        break;
+                    }
+            }
+
+
         }
-    }
-    private void Normal()
-    {
-        Debug.Log("Se abre");
-        StartCoroutine(NormalOpen());
-    }
-    private void Evento()
-    {
-        if (eventoActivado)
+
+        private void Automatica()
         {
-            Debug.Log("Se ha activado el evento");
+            if (tipoDePuerta == TipoDePuerta.Automatica && Touch())
+            {
+                StartCoroutine(OpenDoorAutomatic());
+            }
+        }
+        private void Normal()
+        {
+            Debug.Log("Se abre");
             StartCoroutine(NormalOpen());
         }
-        else
+        private void Evento()
         {
-            Debug.Log("No se ha activado el evento");
-        }
-    }
-    private void MultiplesLlaves()
-    {
-        foreach (SOItem item in keys)
-        {
-            if (inventoryHandler.inventory.Contains(item))
+            if (eventoActivado)
             {
-                Debug.Log("Se abrio con multiples llaves");
+                Debug.Log("Se ha activado el evento");
                 StartCoroutine(NormalOpen());
             }
             else
             {
-                Debug.Log("No tienes las llaves");
+                Debug.Log("No se ha activado el evento");
             }
         }
-    }
-    private void DeLlave()
-    {
-        if (inventoryHandler.inventory.Contains(key))
+        private void MultiplesLlaves()
         {
-            Debug.Log("Se abrio con 1 llave");
-            Destroy(gameObject);
+            foreach (SOItem item in keys)
+            {
+                if (inventoryHandler.inventory.Contains(item))
+                {
+                    Debug.Log("Se abrio con multiples llaves");
+                    StartCoroutine(NormalOpen());
+                }
+                else
+                {
+                    Debug.Log("No tienes las llaves");
+                }
+            }
         }
-        else
+        private void DeLlave()
         {
-            Debug.Log("No tienes la llave");
+            if (inventoryHandler.inventory.Contains(key))
+            {
+                Debug.Log("Se abrio con 1 llave");
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.Log("No tienes la llave");
+            }
         }
+
+        [ContextMenu("Show | Hide keys Names")]
+        public void ToggleBool()
+        {
+            showKeysNames = !showKeysNames;
+        }
+
+
+
+        bool Touch()
+        {
+            return Physics.CheckSphere(transform.position, 4f, LayerMask.GetMask("Player"));
+        }
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, 4f);
+        }
+        IEnumerator OpenDoorAutomatic()
+        {
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
+            Debug.Log("Se abre automaticamente");
+            yield return new WaitForSeconds(2f);
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.down * 2f, 2f);
+
+        }
+        IEnumerator NormalOpen()
+        {
+            transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
+            yield return new WaitForSeconds(2f);
+        }
+
     }
 
-
-
-    bool Touch()
+    public enum TipoDePuerta
     {
-        return Physics.CheckSphere(transform.position, 4f, LayerMask.GetMask("Player"));
+        Automatica, Normal, DeLlave, Evento, MultiplesLlaves
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 4f);
-    }
-    IEnumerator OpenDoorAutomatic()
-    {
-        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
-        Debug.Log("Se abre automaticamente");
-        yield return new WaitForSeconds(2f);
-        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.down * 2f, 2f);
-
-    }
-    IEnumerator NormalOpen()
-    {
-        transform.position = Vector3.Lerp(transform.position, transform.position + Vector3.up * 2f, 2f);
-        yield return new WaitForSeconds(2f);
-    }
-}
-
-public enum TipoDePuerta
-{
-    Automatica, Normal, DeLlave, Evento, MultiplesLlaves
-}
 }
 

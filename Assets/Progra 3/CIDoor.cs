@@ -8,6 +8,7 @@ namespace Door
 
     [CustomEditor(typeof(Door))] // Este script es de custom editor, y modificara los scripts de tipo Door
     [CanEditMultipleObjects]
+
     public class CIDoor : Editor
     {
 
@@ -31,7 +32,7 @@ namespace Door
 
             _door.tipoDePuerta = (TipoDePuerta)EditorGUILayout.EnumPopup("Door Type", _door.tipoDePuerta);
 
-            Spaces(2);
+            Spaces(2); 
 
             switch (_door.tipoDePuerta)
             {
@@ -59,7 +60,7 @@ namespace Door
                         if (_door.showKeysNames == true) // showKeysNames es un bool que se encuentra en el script de Door
                         {
                             foldKeysNames = EditorGUILayout.Foldout(foldKeysNames, "Keys"); // foldKeysNames esta escrito en este script hasta arriba
-                            if (foldKeysNames)
+                            if (foldKeysNames == true)
                             {
                                 for (int i = 0; i < _door.keys.Length; i++)
                                 {
