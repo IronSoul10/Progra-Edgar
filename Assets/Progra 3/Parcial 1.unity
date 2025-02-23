@@ -918,7 +918,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (188)
@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 47636908}
   - component: {fileID: 47636907}
   - component: {fileID: 47636906}
+  - component: {fileID: 47636909}
   m_Layer: 0
   m_Name: TargetZone 2
   m_TagString: Untagged
@@ -1220,7 +1221,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1250,6 +1251,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47636904}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &47636909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47636904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &61082491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -1392,7 +1405,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (85)
@@ -1677,7 +1690,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (7)
@@ -1899,7 +1912,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (175)
@@ -1955,6 +1968,7 @@ GameObject:
   - component: {fileID: 88054664}
   - component: {fileID: 88054663}
   - component: {fileID: 88054662}
+  - component: {fileID: 88054665}
   m_Layer: 0
   m_Name: TargetZone 8
   m_TagString: Untagged
@@ -2021,7 +2035,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2051,6 +2065,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88054660}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &88054665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88054660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &89924491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2102,7 +2128,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (152)
@@ -2740,7 +2766,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2828,7 +2854,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (143)
@@ -2935,7 +2961,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2997,7 +3023,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (146)
@@ -3104,7 +3130,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3166,7 +3192,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (105)
@@ -3678,7 +3704,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (39)
@@ -3844,7 +3870,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (154)
@@ -3939,7 +3965,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (132)
@@ -4065,7 +4091,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (19)
@@ -4376,7 +4402,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4394,6 +4420,7 @@ GameObject:
   - component: {fileID: 244256167}
   - component: {fileID: 244256166}
   - component: {fileID: 244256165}
+  - component: {fileID: 244256168}
   m_Layer: 0
   m_Name: TargetZone 1
   m_TagString: Untagged
@@ -4460,7 +4487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4490,6 +4517,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244256163}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &244256168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244256163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &245916063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4541,7 +4580,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (198)
@@ -4636,7 +4675,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (177)
@@ -5356,6 +5395,7 @@ GameObject:
   - component: {fileID: 294767766}
   - component: {fileID: 294767765}
   - component: {fileID: 294767764}
+  - component: {fileID: 294767767}
   m_Layer: 0
   m_Name: TargetZone 10
   m_TagString: Untagged
@@ -5422,7 +5462,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5452,6 +5492,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294767762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &294767767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294767762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297030600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2c5955ba1c1286740a7eba42548ceeb1, type: 3}
@@ -5837,7 +5889,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (184)
@@ -6121,6 +6173,7 @@ GameObject:
   - component: {fileID: 341719057}
   - component: {fileID: 341719056}
   - component: {fileID: 341719055}
+  - component: {fileID: 341719058}
   m_Layer: 0
   m_Name: TargetZone 8
   m_TagString: Untagged
@@ -6187,7 +6240,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6217,6 +6270,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341719053}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &341719058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341719053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &342630167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6349,7 +6414,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6406,7 +6471,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (180)
@@ -6462,6 +6527,7 @@ GameObject:
   - component: {fileID: 350577129}
   - component: {fileID: 350577128}
   - component: {fileID: 350577127}
+  - component: {fileID: 350577130}
   m_Layer: 0
   m_Name: TargetZone 2
   m_TagString: Untagged
@@ -6528,7 +6594,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6558,6 +6624,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350577125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &350577130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350577125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &362874330
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,6 +6648,7 @@ GameObject:
   - component: {fileID: 362874334}
   - component: {fileID: 362874333}
   - component: {fileID: 362874332}
+  - component: {fileID: 362874335}
   m_Layer: 0
   m_Name: TargetZone 5
   m_TagString: Untagged
@@ -6636,7 +6715,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6666,6 +6745,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362874330}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &362874335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362874330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &369431223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6717,7 +6808,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (3)
@@ -7122,6 +7213,7 @@ GameObject:
   - component: {fileID: 386889887}
   - component: {fileID: 386889886}
   - component: {fileID: 386889885}
+  - component: {fileID: 386889888}
   m_Layer: 0
   m_Name: TargetZone 9
   m_TagString: Untagged
@@ -7188,7 +7280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7218,6 +7310,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386889883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &386889888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386889883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &387470396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7496,6 +7600,7 @@ GameObject:
   - component: {fileID: 402570282}
   - component: {fileID: 402570281}
   - component: {fileID: 402570280}
+  - component: {fileID: 402570283}
   m_Layer: 0
   m_Name: TargetZone 3
   m_TagString: Untagged
@@ -7562,7 +7667,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7592,6 +7697,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402570278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &402570283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402570278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &404158492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8507,7 +8624,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (29)
@@ -8640,7 +8757,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (161)
@@ -8822,6 +8939,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
   m_PrefabInstance: {fileID: 457818913}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &458920039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458920040}
+  - component: {fileID: 458920041}
+  m_Layer: 0
+  m_Name: Global Volumen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &458920040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458920039}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48.74036, y: -40.582047, z: -15.165335}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &458920041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458920039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: fe0d3869645d60c4f9e612e897c17861, type: 2}
 --- !u!1 &460153976
 GameObject:
   m_ObjectHideFlags: 0
@@ -9113,7 +9279,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (204)
@@ -9311,7 +9477,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (44)
@@ -9698,7 +9864,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (140)
@@ -9888,7 +10054,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (162)
@@ -10159,7 +10325,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (97)
@@ -10592,7 +10758,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (45)
@@ -10930,7 +11096,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (174)
@@ -11185,7 +11351,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (130)
@@ -11280,7 +11446,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (99)
@@ -11540,7 +11706,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (176)
@@ -12042,7 +12208,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (9)
@@ -12304,6 +12470,7 @@ GameObject:
   - component: {fileID: 600819975}
   - component: {fileID: 600819974}
   - component: {fileID: 600819973}
+  - component: {fileID: 600819976}
   m_Layer: 0
   m_Name: TargetZone 1
   m_TagString: Untagged
@@ -12370,7 +12537,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12400,6 +12567,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600819971}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &600819976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600819971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &608364369
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,7 +12980,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (145)
@@ -13559,7 +13738,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (83)
@@ -13753,7 +13932,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (38)
@@ -13822,7 +14001,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (186)
@@ -13932,6 +14111,7 @@ GameObject:
   - component: {fileID: 657522274}
   - component: {fileID: 657522273}
   - component: {fileID: 657522272}
+  - component: {fileID: 657522275}
   m_Layer: 0
   m_Name: TargetZone 3
   m_TagString: Untagged
@@ -13998,7 +14178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14028,6 +14208,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657522270}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &657522275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657522270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &658562275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14112,6 +14304,7 @@ GameObject:
   - component: {fileID: 660495062}
   - component: {fileID: 660495061}
   - component: {fileID: 660495060}
+  - component: {fileID: 660495063}
   m_Layer: 0
   m_Name: TargetZone 3
   m_TagString: Untagged
@@ -14178,7 +14371,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14208,6 +14401,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660495058}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &660495063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660495058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &663110550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14259,7 +14464,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (136)
@@ -14354,7 +14559,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (27)
@@ -15171,7 +15376,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (53)
@@ -15201,6 +15406,7 @@ GameObject:
   - component: {fileID: 715038502}
   - component: {fileID: 715038501}
   - component: {fileID: 715038500}
+  - component: {fileID: 715038503}
   m_Layer: 0
   m_Name: TargetZone 10
   m_TagString: Untagged
@@ -15267,7 +15473,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15297,6 +15503,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715038498}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &715038503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715038498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &715285909
 GameObject:
   m_ObjectHideFlags: 0
@@ -15535,6 +15753,7 @@ GameObject:
   - component: {fileID: 717751104}
   - component: {fileID: 717751103}
   - component: {fileID: 717751102}
+  - component: {fileID: 717751105}
   m_Layer: 0
   m_Name: TargetZone 9
   m_TagString: Untagged
@@ -15601,7 +15820,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15631,6 +15850,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717751100}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &717751105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717751100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731109179
 GameObject:
   m_ObjectHideFlags: 0
@@ -16034,7 +16265,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (138)
@@ -16129,7 +16360,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (164)
@@ -16295,6 +16526,7 @@ GameObject:
   - component: {fileID: 791799194}
   - component: {fileID: 791799193}
   - component: {fileID: 791799192}
+  - component: {fileID: 791799195}
   m_Layer: 0
   m_Name: TargetZone 6
   m_TagString: Untagged
@@ -16361,7 +16593,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16391,6 +16623,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791799190}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &791799195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791799190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &806227151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16454,7 +16698,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c4713979bab367e40b65d9ae870c2e05, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16647,7 +16891,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (25)
@@ -16737,7 +16981,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (42)
@@ -16858,7 +17102,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (183)
@@ -17022,7 +17266,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (199)
@@ -17078,6 +17322,7 @@ GameObject:
   - component: {fileID: 838865890}
   - component: {fileID: 838865889}
   - component: {fileID: 838865888}
+  - component: {fileID: 838865891}
   m_Layer: 0
   m_Name: TargetZone 5
   m_TagString: Untagged
@@ -17144,7 +17389,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17174,6 +17419,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838865886}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &838865891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838865886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &843408175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17793,7 +18050,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (28)
@@ -18003,7 +18260,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ab8261bdb128314f9c8d41782675036, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (178)
@@ -18231,6 +18488,7 @@ GameObject:
   - component: {fileID: 890435382}
   - component: {fileID: 890435381}
   - component: {fileID: 890435380}
+  - component: {fileID: 890435383}
   m_Layer: 0
   m_Name: TargetZone 1
   m_TagString: Untagged
@@ -18297,7 +18555,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18327,6 +18585,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890435378}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &890435383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890435378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891937715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -18383,7 +18653,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (34)
@@ -18503,6 +18773,7 @@ GameObject:
   - component: {fileID: 913236926}
   - component: {fileID: 913236925}
   - component: {fileID: 913236924}
+  - component: {fileID: 913236927}
   m_Layer: 0
   m_Name: TargetZone 4
   m_TagString: Untagged
@@ -18569,7 +18840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18599,6 +18870,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913236922}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &913236927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913236922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &920695750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18650,7 +18933,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (151)
@@ -18745,7 +19028,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (159)
@@ -19322,7 +19605,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (135)
@@ -20195,7 +20478,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (192)
@@ -20295,7 +20578,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e86fd06d150d3d44bfcd95f35cd86aa, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20381,7 +20664,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (106)
@@ -20566,7 +20849,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (156)
@@ -20661,7 +20944,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (142)
@@ -20756,7 +21039,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (128)
@@ -20898,6 +21181,7 @@ GameObject:
   - component: {fileID: 1033495636}
   - component: {fileID: 1033495635}
   - component: {fileID: 1033495634}
+  - component: {fileID: 1033495637}
   m_Layer: 0
   m_Name: TargetZone 7
   m_TagString: Untagged
@@ -20964,7 +21248,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20994,6 +21278,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033495632}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1033495637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033495632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1036714550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21121,7 +21417,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (113)
@@ -21251,6 +21547,7 @@ GameObject:
   - component: {fileID: 1053053827}
   - component: {fileID: 1053053826}
   - component: {fileID: 1053053825}
+  - component: {fileID: 1053053828}
   m_Layer: 0
   m_Name: TargetZone 4
   m_TagString: Untagged
@@ -21317,7 +21614,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21347,6 +21644,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053053823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1053053828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053053823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1057218702
 Mesh:
   m_ObjectHideFlags: 0
@@ -21568,7 +21877,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deadff5432a065f4abc55101f752f06e, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21774,7 +22083,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (196)
@@ -22309,6 +22618,7 @@ GameObject:
   - component: {fileID: 1086775774}
   - component: {fileID: 1086775773}
   - component: {fileID: 1086775772}
+  - component: {fileID: 1086775775}
   m_Layer: 0
   m_Name: TargetZone 8
   m_TagString: Untagged
@@ -22375,7 +22685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22405,6 +22715,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086775770}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1086775775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086775770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1089286450 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -27540,7 +27862,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (95)
@@ -28277,7 +28599,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (30)
@@ -29048,7 +29370,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (86)
@@ -29615,7 +29937,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (51)
@@ -29911,7 +30233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e86fd06d150d3d44bfcd95f35cd86aa, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30082,7 +30404,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (191)
@@ -30495,7 +30817,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (91)
@@ -30755,7 +31077,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (190)
@@ -30811,6 +31133,7 @@ GameObject:
   - component: {fileID: 1228037824}
   - component: {fileID: 1228037823}
   - component: {fileID: 1228037822}
+  - component: {fileID: 1228037825}
   m_Layer: 0
   m_Name: TargetZone 5
   m_TagString: Untagged
@@ -30877,7 +31200,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30907,6 +31230,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228037820}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1228037825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228037820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1238515284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30958,7 +31293,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (88)
@@ -31353,6 +31688,7 @@ GameObject:
   - component: {fileID: 1271545259}
   - component: {fileID: 1271545258}
   - component: {fileID: 1271545257}
+  - component: {fileID: 1271545260}
   m_Layer: 0
   m_Name: TargetZone 9
   m_TagString: Untagged
@@ -31419,7 +31755,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31449,6 +31785,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271545255}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1271545260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271545255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1277787838
 GameObject:
   m_ObjectHideFlags: 0
@@ -31636,7 +31984,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (168)
@@ -32019,7 +32367,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (200)
@@ -32270,6 +32618,7 @@ GameObject:
   - component: {fileID: 1330284403}
   - component: {fileID: 1330284402}
   - component: {fileID: 1330284401}
+  - component: {fileID: 1330284404}
   m_Layer: 0
   m_Name: TargetZone 4
   m_TagString: Untagged
@@ -32336,7 +32685,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32366,6 +32715,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330284399}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1330284404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330284399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &1331626252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32823,7 +33184,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (32)
@@ -32944,7 +33305,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (166)
@@ -33137,7 +33498,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33437,7 +33798,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (112)
@@ -33532,7 +33893,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (31)
@@ -33606,7 +33967,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (100)
@@ -34024,7 +34385,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (127)
@@ -34246,7 +34607,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34308,7 +34669,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (119)
@@ -34413,7 +34774,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (43)
@@ -35007,6 +35368,7 @@ GameObject:
   - component: {fileID: 1478174639}
   - component: {fileID: 1478174638}
   - component: {fileID: 1478174637}
+  - component: {fileID: 1478174640}
   m_Layer: 0
   m_Name: TargetZone 7
   m_TagString: Untagged
@@ -35073,7 +35435,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35103,6 +35465,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478174635}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1478174640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478174635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1487874846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35154,7 +35528,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (120)
@@ -35770,7 +36144,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (160)
@@ -36296,6 +36670,7 @@ GameObject:
   - component: {fileID: 1525893275}
   - component: {fileID: 1525893274}
   - component: {fileID: 1525893273}
+  - component: {fileID: 1525893276}
   m_Layer: 0
   m_Name: TargetZone 2
   m_TagString: Untagged
@@ -36362,7 +36737,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36392,6 +36767,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525893271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1525893276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525893271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1526154631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
@@ -36474,7 +36861,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (144)
@@ -36621,7 +37008,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (153)
@@ -36742,7 +37129,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (172)
@@ -36837,7 +37224,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (92)
@@ -36907,55 +37294,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.170441, y: 7.1538963, z: 0.86563873}
   m_Center: {x: 5.5852203, y: 3.5769482, z: 0.43282068}
---- !u!1 &1585537798
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1585537799}
-  - component: {fileID: 1585537800}
-  m_Layer: 0
-  m_Name: Global Volumen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1585537799
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585537798}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.911613, y: 22.957958, z: 64.646904}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1585537800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585537798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 926b67a8028ffeb47b2d264fd1dfdb63, type: 2}
 --- !u!1 &1589391096
 GameObject:
   m_ObjectHideFlags: 0
@@ -37166,7 +37504,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37223,7 +37561,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ab9be7723ce29194bb00232de7ec69aa, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (89)
@@ -37417,7 +37755,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (194)
@@ -37637,7 +37975,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (26)
@@ -37817,7 +38155,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (167)
@@ -38042,7 +38380,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (201)
@@ -39452,7 +39790,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (40)
@@ -39542,7 +39880,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (35)
@@ -39593,6 +39931,7 @@ GameObject:
   - component: {fileID: 1698055722}
   - component: {fileID: 1698055721}
   - component: {fileID: 1698055720}
+  - component: {fileID: 1698055723}
   m_Layer: 0
   m_Name: TargetZone 10
   m_TagString: Untagged
@@ -39659,7 +39998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39689,6 +40028,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698055718}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1698055723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698055718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1699980902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 452220841715424270, guid: 9cf7dd5b5a32e9547a9311b72fd0db65, type: 3}
@@ -39831,7 +40182,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (17)
@@ -40849,7 +41200,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (121)
@@ -41065,7 +41416,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (101)
@@ -41496,7 +41847,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (158)
@@ -41595,7 +41946,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 584761fab006d6d42b4d0d8c56a51241, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c43b3a9cf9027fa4e83e2c3fc672a6ab, type: 2}
+      objectReference: {fileID: 2100000, guid: 72e31702bf75f0347b7745db8aeb8aac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -41709,7 +42060,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (137)
@@ -41880,7 +42231,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (15)
@@ -42129,7 +42480,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (18)
@@ -42319,7 +42670,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deadff5432a065f4abc55101f752f06e, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -42541,7 +42892,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (84)
@@ -42842,7 +43193,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (118)
@@ -43109,6 +43460,7 @@ GameObject:
   - component: {fileID: 1886512242}
   - component: {fileID: 1886512241}
   - component: {fileID: 1886512240}
+  - component: {fileID: 1886512243}
   m_Layer: 0
   m_Name: TargetZone 6
   m_TagString: Untagged
@@ -43175,7 +43527,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43205,6 +43557,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886512238}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1886512243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886512238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1887570035
 GameObject:
   m_ObjectHideFlags: 0
@@ -43217,6 +43581,7 @@ GameObject:
   - component: {fileID: 1887570039}
   - component: {fileID: 1887570038}
   - component: {fileID: 1887570037}
+  - component: {fileID: 1887570040}
   m_Layer: 0
   m_Name: TargetZone 7
   m_TagString: Untagged
@@ -43283,7 +43648,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43313,6 +43678,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887570035}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1887570040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887570035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1889178977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43364,7 +43741,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (93)
@@ -43793,7 +44170,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (126)
@@ -43888,7 +44265,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (150)
@@ -43983,7 +44360,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (41)
@@ -44147,7 +44524,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (202)
@@ -44370,7 +44747,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (36)
@@ -44460,7 +44837,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (96)
@@ -44731,7 +45108,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (37)
@@ -45028,7 +45405,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c43b3a9cf9027fa4e83e2c3fc672a6ab, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45109,7 +45486,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (5)
@@ -45364,7 +45741,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (52)
@@ -45678,7 +46055,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e86fd06d150d3d44bfcd95f35cd86aa, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -45972,7 +46349,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: abd3afbf2a9067549ae5bb94139b5f43, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (148)
@@ -46268,7 +46645,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (182)
@@ -46537,7 +46914,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (169)
@@ -46743,8 +47120,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   latitud: 37.566
   longitud: 126.9784
-  volumenProfile: {fileID: 0}
-  bloomColorTransitionSpeed: 0
+  volumenProfile: {fileID: 11400000, guid: fe0d3869645d60c4f9e612e897c17861, type: 2}
+  bloomColorTransitionSpeed: 0.5
 --- !u!1 &2005319383
 GameObject:
   m_ObjectHideFlags: 0
@@ -47005,6 +47382,7 @@ GameObject:
   - component: {fileID: 2026286058}
   - component: {fileID: 2026286057}
   - component: {fileID: 2026286056}
+  - component: {fileID: 2026286059}
   m_Layer: 0
   m_Name: TargetZone 6
   m_TagString: Untagged
@@ -47071,7 +47449,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47101,6 +47479,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026286054}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2026286059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026286054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b978a0e750ac5e340889e1500d29fff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2027172386
 GameObject:
   m_ObjectHideFlags: 0
@@ -47370,7 +47760,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (16)
@@ -47486,7 +47876,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (129)
@@ -47581,7 +47971,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (87)
@@ -47710,7 +48100,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (131)
@@ -47805,7 +48195,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2c5955ba1c1286740a7eba42548ceeb1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8af46ebcbc4755543a8b7858da7d27f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 0c691f46eeb7e924fa667b2d957667a3, type: 2}
     - target: {fileID: 919132149155446097, guid: 2c5955ba1c1286740a7eba42548ceeb1, type: 3}
       propertyPath: m_Name
       value: Escaleras_01 (6)
@@ -47994,7 +48384,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 2c5955ba1c1286740a7eba42548ceeb1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8af46ebcbc4755543a8b7858da7d27f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 0c691f46eeb7e924fa667b2d957667a3, type: 2}
     - target: {fileID: 919132149155446097, guid: 2c5955ba1c1286740a7eba42548ceeb1, type: 3}
       propertyPath: m_Name
       value: Escaleras_01 (1)
@@ -48256,7 +48646,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c43b3a9cf9027fa4e83e2c3fc672a6ab, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48337,7 +48727,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (193)
@@ -48432,7 +48822,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (33)
@@ -48522,7 +48912,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 928628f5585c61d48bc2ace1bcff6398, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (185)
@@ -48617,7 +49007,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: 1cc1de1ed3ae4c9448f5efa874ebef80, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (90)
@@ -48802,7 +49192,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19f7315be2f239a47b71a077add6d787, type: 2}
+      objectReference: {fileID: 2100000, guid: c379d2f1377cca444a71bc89a42e8de6, type: 2}
     - target: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
       propertyPath: m_Name
       value: Muro_03 (170)
@@ -49215,7 +49605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e86fd06d150d3d44bfcd95f35cd86aa, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51206,7 +51596,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deadff5432a065f4abc55101f752f06e, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51251,7 +51641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51296,7 +51686,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c43b3a9cf9027fa4e83e2c3fc672a6ab, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51636,7 +52026,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deadff5432a065f4abc55101f752f06e, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51681,7 +52071,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c43b3a9cf9027fa4e83e2c3fc672a6ab, type: 2}
+  - {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51771,7 +52161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 88c0989de3081d54aa6f2c1d7df15362, type: 2}
+  - {fileID: 2100000, guid: c878a38b19c537b41a3130762f24c0ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52089,7 +52479,7 @@ PrefabInstance:
     - target: {fileID: 4512491420502490437, guid: 766875322a1788846a5fdf9e6ca3e2ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+      objectReference: {fileID: 2100000, guid: ec9a5bc0f3a540e47b28293d5a9503ed, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53957,6 +54347,6 @@ SceneRoots:
   - {fileID: 178824397}
   - {fileID: 2129172069}
   - {fileID: 1290758175}
-  - {fileID: 1585537799}
   - {fileID: 1115174123}
   - {fileID: 547756563}
+  - {fileID: 458920040}
