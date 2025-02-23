@@ -25,7 +25,7 @@ using UnityEngine;
 
         private void Aim()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse1))
             {
                 StartCoroutine(Shooot());
             }

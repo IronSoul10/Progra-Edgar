@@ -1,24 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 
 public class Item1 : MonoBehaviour, IInteractable
+{
+    [SerializeField] private SOItem item;
+    [SerializeField] InventoryHandler1 inventory;
+
+    public void Interact()
     {
-        [SerializeField] private SOItem item;
-        private InventoryHandler1 inventory;
-
-        private void Start()
-        {
-            inventory = FindObjectOfType<InventoryHandler1>();
-        }
-
-        public void Interact()
-        {
-            inventory.AddItem(item);
-            Destroy(gameObject);
-        }
-
+        inventory.AddItem(item);
+        MeshRenderer mesh = GetComponent<MeshRenderer>();
+        mesh.enabled = false;
     }
+
+}
 

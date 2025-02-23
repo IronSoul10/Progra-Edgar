@@ -61,11 +61,14 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
-  - {fileID: 2100000, guid: 2bdac9261c2efd4438d422753f42e1bc, type: 2}
+  - {fileID: 2100000, guid: 72e31702bf75f0347b7745db8aeb8aac, type: 2}
+  - {fileID: 2100000, guid: 72e31702bf75f0347b7745db8aeb8aac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
