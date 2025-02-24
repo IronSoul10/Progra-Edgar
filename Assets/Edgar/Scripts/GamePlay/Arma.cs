@@ -8,7 +8,7 @@ public class Arma : MonoBehaviour
     [SerializeField] Transform puntoTiro;
 
     [SerializeField] public int municionActual = 100;
-    [SerializeField] int capacidadMaxima = 100;
+    //[SerializeField] int capacidadMaxima = 100;
 
     private ManagerBalas contador;
     

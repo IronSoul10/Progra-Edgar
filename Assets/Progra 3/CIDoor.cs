@@ -32,7 +32,7 @@ namespace Door
 
             _door.tipoDePuerta = (TipoDePuerta)EditorGUILayout.EnumPopup("Door Type", _door.tipoDePuerta);
 
-            Spaces(2); 
+            Spaces(2);
 
             switch (_door.tipoDePuerta)
             {
@@ -56,7 +56,6 @@ namespace Door
                         descripcion = "Esta puerta requiere de multiples llaves para abrirse. Indica en el arreglo cuantas llaves necesita y cuales";
                         EditorGUILayout.PropertyField(multipleKeys, new GUIContent("Llaves Requeridas"), true);
 
-
                         if (_door.showKeysNames == true) // showKeysNames es un bool que se encuentra en el script de Door
                         {
                             foldKeysNames = EditorGUILayout.Foldout(foldKeysNames, "Keys"); // foldKeysNames esta escrito en este script hasta arriba
@@ -79,7 +78,6 @@ namespace Door
                             }
                         }
 
-
                         break;
                     }
 
@@ -94,13 +92,10 @@ namespace Door
                         descripcion = "Esta puerta se abre manualmente";
                         break;
                     }
-
-
             }
             serializedObject.ApplyModifiedProperties();
             serializedObject.ApplyModifiedPropertiesWithoutUndo();
         }
-
 
         private void Spaces(int spaces)
         {

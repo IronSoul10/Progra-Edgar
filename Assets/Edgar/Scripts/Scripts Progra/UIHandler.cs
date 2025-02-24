@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class UIHandler1 : MonoBehaviour
+public class UIHandler : MonoBehaviour
 {
         [SerializeField] private GameObject inventoryCanvas;
         [SerializeField] private GameObject uiItemPrefab;

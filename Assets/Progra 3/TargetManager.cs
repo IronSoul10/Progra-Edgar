@@ -4,6 +4,7 @@ public class TargetManager : MonoBehaviour
 {
     [SerializeField] private int targetCount;
     [SerializeField] private GameObject[] item;
+    [SerializeField] public bool levelComplete = false;
 
     private void Start()
     {
@@ -27,35 +28,36 @@ public class TargetManager : MonoBehaviour
     {
         switch (targetCount)
         {
-            case 3:
+            case 5:
                 item[0].SetActive(true);
                 break;
-            case 6:
+            case 10:
                 item[1].SetActive(true);
                 break;
-            case 9:
+            case 15:
                 item[2].SetActive(true);
                 break;
-            case 12:
+            case 20:
                 item[3].SetActive(true);
                 break;
-            case 15:
+            case 25:
                 item[4].SetActive(true);
                 break;
-            case 18:
+            case 30:
                 item[5].SetActive(true);
                 break;
-            case 21:
+            case 35:
                 item[6].SetActive(true);
                 break;
-            case 24:
+            case 40:
                 item[7].SetActive(true);
                 break;
-            case 27:
+            case 45:
                 item[8].SetActive(true);
                 break;
-            case 30:
+            case 50:
                 item[9].SetActive(true);
+                levelComplete = true;
                 break;
         }
     }

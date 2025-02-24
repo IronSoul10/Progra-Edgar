@@ -11,12 +11,11 @@ public class ContadorBajas : MonoBehaviour
     [SerializeField] GameObject openDoor;
     [SerializeField] GameObject closeDoor;
 
-    public InventoryHandler1 inventoryHandler;
+    [SerializeField] public InventoryHandler1 inventoryHandler;
 
     private void Start()
     {
         ActualizarContador();
-        inventoryHandler = FindObjectOfType<InventoryHandler1>();
         
     }
 
