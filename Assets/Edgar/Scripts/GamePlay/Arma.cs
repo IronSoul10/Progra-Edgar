@@ -1,4 +1,6 @@
 using UnityEngine;
+using static UnityEngine.UI.Image;
+using UnityEngine.UIElements;
 
 
 public class Arma : MonoBehaviour
@@ -54,7 +56,8 @@ public class Arma : MonoBehaviour
 
         }
     }
-   public void MunicionActualEnArma()
+
+    public void MunicionActualEnArma()
     {
         municionActual = 100;
 

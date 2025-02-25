@@ -4,11 +4,11 @@ using UnityEngine;
 
 public struct WeatherData
 {
-    public string country;
-    public string city;
+    public string timeZone;
     public float actualTemp;
     public float description;
     public float windSpeed;
-    public string timeZone;
+    public string country;
+    public string city;
 }
 

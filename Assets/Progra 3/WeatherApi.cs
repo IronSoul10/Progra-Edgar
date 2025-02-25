@@ -7,63 +7,67 @@ using UnityEngine.Rendering.Universal;
 
 public class WeatherApi : MonoBehaviour
 {
-    private static WeatherData data;
-    [SerializeField] float latitud = 37.566f;
-    [SerializeField] float longitud = 126.9784f;
-    private static readonly string apiKey = "7fe45acb4f5a69f83c45312aad97613a";
+    private static WeatherData data; //Estructura de la data del clima
+    [SerializeField] float latitud = 37.566f; //Latitud de la ciudad
+    [SerializeField] float longitud = 126.9784f; //Longitud de la ciudad
+    [SerializeField] private string countryName; // Nombre del país para mostrar en el inspector
+    private static readonly string apiKey = "7fe45acb4f5a69f83c45312aad97613a"; //API Key
 
-    private string url;
-    private string json;
+    private string url; //URL de la API
+    private string json; //JSON
 
-    [SerializeField] private VolumeProfile volumenProfile;
-    [SerializeField] private float bloomColorTransitionSpeed;
-    private Color actualColor;
+    [SerializeField] private VolumeProfile volumenProfile; //Perfil de volumen
+    [SerializeField] private float bloomColorTransitionSpeed; //Velocidad de transicion de color
+    private Color actualColor; //Color actual
 
     private void Start()
     {
-        url = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitud}&lon={longitud}&appid={apiKey}&lang=sp&units=metric";
-        StartCoroutine(RetrieveWhwatherData());
-
+        url = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitud}&lon={longitud}&appid={apiKey}&lang=sp&units=metric"; //URL de la API
+        StartCoroutine(RetrieveWhwatherData()); //Obtiene la data del clima
     }
+
     IEnumerator RetrieveWhwatherData()
     {
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(5); //Espera 5 segundos
 
-        UnityWebRequest request = new UnityWebRequest(url);
-        request.downloadHandler = new DownloadHandlerBuffer();
+        UnityWebRequest request = new UnityWebRequest(url); //Crea un objeto de tipo UnityWebRequest
+        request.downloadHandler = new DownloadHandlerBuffer(); //Descarga la data
 
-        yield return request.SendWebRequest();
+        yield return request.SendWebRequest(); //Espera a que se descargue la data
 
         if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log(request.error);
+            Debug.Log(request.error); //Error
         }
         else
         {
-            Debug.Log(request.downloadHandler.text);
-            json = request.downloadHandler.text;
-            //DecodeJson();
-            yield return new WaitForSeconds(2);
-            actualColor = GetColorByTemp();
-            StartCoroutine(BloomColorTransition());
+            Debug.Log(request.downloadHandler.text); //JSON
+            json = request.downloadHandler.text; // JSON
+            DecodeJson(); //Decodifica el JSON
+            yield return new WaitForSeconds(2); //Espera 2 segundos para que se cargue la data
+            actualColor = GetColorByTemp(); //Obtiene el color segun la temperatura
+            StartCoroutine(BloomColorTransition()); //Transicion de color
         }
     }
-    private IEnumerator BloomColorTransition()
+
+    private IEnumerator BloomColorTransition() //Transicion de color
     {
-        yield return new WaitUntil(() => TransitionColor() == actualColor);
+        yield return new WaitUntil(() => TransitionColor() == actualColor); //Espera a que la transicion de color termine
         Debug.Log("Color Cambiado");
     }
-    private Color TransitionColor()
+
+    private Color TransitionColor() //Transicion de color
     {
-        volumenProfile.TryGet(out Bloom bloom);
-        bloom.tint.value = Color.Lerp(bloom.tint.value, actualColor, bloomColorTransitionSpeed);
-        return bloom.tint.value;
+        volumenProfile.TryGet(out Bloom bloom); // Obtiene el bloom del perfil de volumen
+        bloom.tint.value = Color.Lerp(bloom.tint.value, actualColor, bloomColorTransitionSpeed); //Transicion de color
+        return bloom.tint.value; //Retorna el color
     }
-    private Color GetColorByTemp()
+
+    private Color GetColorByTemp() //Obtiene el color segun la temperatura
     {
         switch (data.actualTemp)
         {
-            case var color when data.actualTemp <= 8:
+            case var color when data.actualTemp <= 8: //Si la temperatura es menor o igual a 8
                 {
                     actualColor = Color.cyan;
                     return actualColor;
@@ -93,15 +97,19 @@ public class WeatherApi : MonoBehaviour
                 }
         }
     }
-    private void DecodeJson()
+
+    public void DecodeJson()
     {
         var weatherJson = JSON.Parse(json);
+        Debug.Log("mostrar datos");
 
-        data.timeZone = weatherJson["timezone"].Value;
-        data.actualTemp = float.Parse(weatherJson["current"]["temp"].Value);
-        data.description = float.Parse(weatherJson["current"][0]["description"].Value);
-        data.windSpeed = float.Parse(weatherJson["current"]["wind_speed"].Value);
+        data.timeZone = weatherJson["timezone"].Value; //Zona horaria
+        data.actualTemp = float.Parse(weatherJson["current"]["temp"].Value); //Temperatura actual
+        data.description = float.Parse(weatherJson["current"][0]["description"].Value); //Descripcion
+        data.windSpeed = float.Parse(weatherJson["current"]["wind_speed"].Value); //Velocidad del viento
+        data.country = weatherJson["current"]["sys"]["country"].Value; //Pais
+        data.city = weatherJson["current"]["name"].Value; //Ciudad
 
-
+        countryName = data.country; // Actualiza el nombre del país para mostrar en el inspector
     }
 }

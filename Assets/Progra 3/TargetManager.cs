@@ -53,11 +53,8 @@ public class TargetManager : MonoBehaviour
                 item[7].SetActive(true);
                 break;
             case 45:
-                item[8].SetActive(true);
-                break;
-            case 50:
-                item[9].SetActive(true);
                 levelComplete = true;
+                item[8].SetActive(true);
                 break;
         }
     }
