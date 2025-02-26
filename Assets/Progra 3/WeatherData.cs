@@ -1,14 +1,19 @@
 using UnityEngine;
-
 [System.Serializable]
-
 public struct WeatherData
 {
-    [SerializeField] public string country;
-    [SerializeField] public string timeZone;
+
+    [SerializeField] public string name;
     [SerializeField] public float actualTemp;
-    [SerializeField] public float description;
     [SerializeField] public float windSpeed;
-    [SerializeField] public string city;
+    [SerializeField] public float humidity;
+}
+
+[System.Serializable]
+public class Country // Hice que la clase Country sea serializable para que pueda ser vista en el inspector
+{
+    [SerializeField] public string name; //Nombre del país
+    [SerializeField] public float latitude; //Latitud
+    [SerializeField] public float longitude; //Longitud
 }
 
