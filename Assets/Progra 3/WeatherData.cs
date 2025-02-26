@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[SerializeField]
+[System.Serializable]
 
 public struct WeatherData
 {
-    public string timeZone;
-    public float actualTemp;
-    public float description;
-    public float windSpeed;
-    public string country;
-    public string city;
+    [SerializeField] public string country;
+    [SerializeField] public string timeZone;
+    [SerializeField] public float actualTemp;
+    [SerializeField] public float description;
+    [SerializeField] public float windSpeed;
+    [SerializeField] public string city;
 }
 

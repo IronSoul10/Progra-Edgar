@@ -5,15 +5,20 @@ using UnityEngine.Networking;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+[System.Serializable]
+public class Country // Hice que la clase Country sea serializable para que pueda ser vista en el inspector
+{
+    public string name; //Nombre del país
+    public float latitude; //Latitud
+    public float longitude; //Longitud
+}
 public class WeatherApi : MonoBehaviour
 {
-    private static WeatherData data; //Estructura de la data del clima
-    [SerializeField] float latitud = 37.566f; //Latitud de la ciudad
-    [SerializeField] float longitud = 126.9784f; //Longitud de la ciudad
-    [SerializeField] private string countryName; // Nombre del país para mostrar en el inspector
+    [SerializeField] private WeatherData data; //Estructura de la data del clima
+    [SerializeField] private Country[] countries = new Country[10] ; //Paises
+
     private static readonly string apiKey = "7fe45acb4f5a69f83c45312aad97613a"; //API Key
 
-    private string url; //URL de la API
     private string json; //JSON
 
     [SerializeField] private VolumeProfile volumenProfile; //Perfil de volumen
@@ -22,7 +27,6 @@ public class WeatherApi : MonoBehaviour
 
     private void Start()
     {
-        url = $"https://api.openweathermap.org/data/3.0/onecall?lat={latitud}&lon={longitud}&appid={apiKey}&lang=sp&units=metric"; //URL de la API
         StartCoroutine(RetrieveWhwatherData()); //Obtiene la data del clima
     }
 
@@ -30,12 +34,12 @@ public class WeatherApi : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(5); //Espera 5 segundos
 
-        UnityWebRequest request = new UnityWebRequest(url); //Crea un objeto de tipo UnityWebRequest
+        UnityWebRequest request = new UnityWebRequest(CountryURL()); //Crea un objeto de tipo UnityWebRequest con la URL del país
         request.downloadHandler = new DownloadHandlerBuffer(); //Descarga la data
 
         yield return request.SendWebRequest(); //Espera a que se descargue la data
 
-        if (request.result != UnityWebRequest.Result.Success)
+        if (request.result != UnityWebRequest.Result.Success) //Si hay un error
         {
             Debug.Log(request.error); //Error
         }
@@ -110,6 +114,18 @@ public class WeatherApi : MonoBehaviour
         data.country = weatherJson["current"]["sys"]["country"].Value; //Pais
         data.city = weatherJson["current"]["name"].Value; //Ciudad
 
-        countryName = data.country; // Actualiza el nombre del país para mostrar en el inspector
+    }
+    string CountryURL() //URL del pais
+    {
+        Country country = RandomCountry(); // Obtiene un país aleatorio
+                                             
+        string url = $"https://api.openweathermap.org/data/3.0/onecall?lat={country.latitude}&lon={country.longitude}&appid={apiKey}&lang=sp&units=metric";  // Construye la URL de la API usando la latitud y longitud del país aleatorio
+        return url; // Retorna la URL
+    }
+
+    Country RandomCountry() // Obtiene un país aleatorio
+    {
+        int randomIndex = Random.Range(0, countries.Length); // Genera un índice aleatorio
+        return countries[randomIndex]; // Retorna el país en el índice aleatorio
     }
 }

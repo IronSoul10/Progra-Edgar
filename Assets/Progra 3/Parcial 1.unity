@@ -49252,9 +49252,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81baac5ab7612884b8b8525ea1684fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  latitud: 37.566
-  longitud: 126.9784
-  countryName: 
+  data:
+    country: 
+    timeZone: 
+    actualTemp: 0
+    description: 0
+    windSpeed: 0
+    city: 
+  countries:
+  - name: Alemania
+    latitude: 51.16569
+    longitude: 10.451526
+  - name: "Espa\xF1a"
+    latitude: 40.46367
+    longitude: -3.74922
+  - name: Estados Unidos
+    latitude: 37.09024
+    longitude: -95.71289
+  - name: Francia
+    latitude: 46.22764
+    longitude: 2.213749
+  - name: Libia
+    latitude: 26.3351
+    longitude: 17.22833
+  - name: Marruecos
+    latitude: 31.7917
+    longitude: -7.09262
+  - name: Paises Bajos
+    latitude: 52.13263
+    longitude: 5.291266
+  - name: Reino Unido
+    latitude: 55.37805
+    longitude: -3.435973
+  - name: Turquia
+    latitude: 38.96375
+    longitude: 35.24332
+  - name: Portugal
+    latitude: 39.39987
+    longitude: -8.224454
   volumenProfile: {fileID: 11400000, guid: fe0d3869645d60c4f9e612e897c17861, type: 2}
   bloomColorTransitionSpeed: 0.5
 --- !u!1 &2005319383
