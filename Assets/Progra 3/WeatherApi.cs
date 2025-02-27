@@ -11,9 +11,9 @@ namespace Weather
 
     public class WeatherApi : MonoBehaviour
     {
-        [SerializeField] internal WeatherData data; //Estructura de la data del clima
-        [SerializeField] internal Country[] countries = new Country[10]; //Paises
-        [SerializeField] internal int currentCountryIndex = -1; // Índice del país actual
+        [SerializeField] public WeatherData data; //Estructura de la data del clima
+        [SerializeField] public Country[] countries = new Country[10]; //Paises
+        [SerializeField] public int currentCountryIndex = -1; // Índice del país actual
 
         [SerializeField] private VolumeProfile volumenProfile; //Perfil de volumen
         [SerializeField] private float bloomColorTransitionSpeed; //Velocidad de transicion de color
@@ -165,7 +165,6 @@ namespace Weather
         public void DecodeJson()
         {
             var weatherJson = JSON.Parse(json);
-            Debug.Log("mostrar datos");
 
             data.actualTemp = float.Parse(weatherJson["current"]["temp"].Value); //Temperatura actual
             data.name = weatherJson["timezone"].Value; //Zona horaria
@@ -173,7 +172,7 @@ namespace Weather
             data.humidity = float.Parse(weatherJson["current"]["humidity"].Value); //Humedad
 
             // Actualiza el nombre del país actual
-            if (currentCountryIndex >= 0 && currentCountryIndex < countries.Length)
+            if (currentCountryIndex >= 0 && currentCountryIndex < countries.Length) //
             {
                 countries[currentCountryIndex].name = weatherJson["timezone"].Value;
             }

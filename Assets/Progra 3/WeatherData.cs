@@ -10,7 +10,7 @@ public struct WeatherData
 }
 
 [System.Serializable]
-public class Country // Hice que la clase Country sea serializable para que pueda ser vista en el inspector
+public struct Country // Hice que la clase Country sea serializable para que pueda ser vista en el inspector
 {
     [SerializeField] public string name; //Nombre del país
     [SerializeField] public float latitude; //Latitud

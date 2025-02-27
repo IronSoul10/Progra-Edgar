@@ -1,11 +1,9 @@
 using UnityEditor;
-using UnityEngine.SceneManagement;
 using UnityEngine; // Contiene todo lo que necesitamos para modificar el editor de unity
+
+
 namespace Door
 {
-
-#if UNITY_EDITOR // Indica que solo se compila si estas en el editor de unity
-
     [CustomEditor(typeof(Door))] // Este script es de custom editor, y modificara los scripts de tipo Door
     [CanEditMultipleObjects]
 
@@ -124,6 +122,5 @@ namespace Door
         }
 
     }
-
-#endif
 }
+

@@ -5,12 +5,13 @@ using Weather;
 [CustomEditor(typeof(WeatherApi))]
 public class WeatherEditor : Editor
 {
+    private WeatherApi weatherApi;
     private bool[] foldouts; // Array para manejar los foldouts de cada país
 
     private void OnEnable()
     {
         // Inicializa el array de foldouts con el tamaño del array de países
-        WeatherApi weatherApi = (WeatherApi)target;
+        weatherApi = (WeatherApi)target;
         foldouts = new bool[weatherApi.countries.Length]; // Inicializa el array de foldouts con el tamaño del array de países
     }
 
@@ -25,6 +26,7 @@ public class WeatherEditor : Editor
         for (int i = 0; i < countries.arraySize; i++) // Itera sobre los países
         {
             SerializedProperty country = countries.GetArrayElementAtIndex(i); // Obtiene el país actual
+
             EditorGUILayout.PropertyField(country.FindPropertyRelative("name"), new GUIContent("Name")); // Dibuja el campo de nombre
             EditorGUILayout.PropertyField(country.FindPropertyRelative("latitude"), new GUIContent("Latitude")); // Dibuja el campo de latitud
             EditorGUILayout.PropertyField(country.FindPropertyRelative("longitude"), new GUIContent("Longitude")); // Dibuja el campo de longitud

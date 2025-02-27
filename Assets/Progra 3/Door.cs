@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Door
 {
-
     // Tipos de puerta: Automatica, Normal, DeLlave, Evento, MultiplesLlaves
     public class Door : MonoBehaviour, IInteractable
     {
@@ -109,7 +108,7 @@ namespace Door
 
         private void DeLlave()
         {
-                Debug.Log("Ver");
+            Debug.Log("Ver");
             if (inventoryHandler.inventory.Contains(key))
             {
                 Debug.Log("Si tengo llave");
@@ -159,4 +158,5 @@ namespace Door
         Automatica, Normal, DeLlave, Evento, MultiplesLlaves
     }
 }
+
 
