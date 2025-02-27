@@ -143,7 +143,7 @@ namespace Weather
 
                 case var color when data.actualTemp > 24 && data.actualTemp < 45:
                     {
-                        actualAdjustmentColor = Color.gray;
+                        actualAdjustmentColor = Color.yellow;
                         Sun1();
                         return actualAdjustmentColor;
                     }

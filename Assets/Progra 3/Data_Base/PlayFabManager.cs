@@ -26,7 +26,7 @@ public class PlayFabManager : MonoBehaviour
     }
     private void Update()
     {
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
     }
     void RegistrerUsuer()
     {
