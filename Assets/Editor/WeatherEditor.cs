@@ -33,10 +33,11 @@ public class WeatherEditor : Editor
 
             // Crea un foldout para cada país
             foldouts[i] = EditorGUILayout.Foldout(foldouts[i], "Weather Data"); // Dibuja el foldout de datos del clima
+
             if (foldouts[i]) // Si el foldout está abierto
             {
                 // Verifica si este país es el actual
-                if (i == weatherApi.currentCountryIndex)
+                if (i == weatherApi.currentCountryIndex) // Si el país es el actual
                 {
                     EditorGUILayout.LabelField("Time Zone", weatherApi.data.name); // Dibuja la zona horaria
                     EditorGUILayout.LabelField("Actual Temperature", weatherApi.data.actualTemp.ToString()); // Dibuja la temperatura actual

@@ -9446,7 +9446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &458920040
 Transform:
   m_ObjectHideFlags: 0
@@ -20175,10 +20175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de9cb48300b165e4289f5c323cdb47a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleId: 3020F
-  secretKey: ERSDCC7P8IQQGMYBWCB5OWT83UHCOIRTJT1YFIOAI8ABA3HNRR
-  newUsernameInput: {fileID: 291639729}
-  setPasswordInput: {fileID: 0}
 --- !u!1 &876922824 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 72699f0209e0ec042ab3a3a1b47b3fce, type: 3}
