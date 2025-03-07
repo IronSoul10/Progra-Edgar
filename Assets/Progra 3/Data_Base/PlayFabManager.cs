@@ -2,15 +2,15 @@ using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
 using UnityEngine;
-using System;
-using System.Collections;
 using UnityEngine.Events;
 
 public class PlayFabManager : MonoBehaviour
 {
     [Header("PLAYFAB SETTINGS")]
-    [SerializeField] private string titleID = "1C3E3";
-    [SerializeField] private string secretKey = "C1K6MS4KCPD56NIEY7EI7B4H737BOO153ZFCJTD4YAO9PIXY55";
+    [SerializeField] private string titleID = "3020F";
+    [SerializeField]
+    private string secretKey = "ERSDCC7P8IQQGMYBWCB5OWT83UHCOIRTJT1YFIOAI8ABA3HNRR"
+;
 
     [Header("Create Account Inputs")]
     [SerializeField] private TMP_InputField newUsernameInput;
@@ -24,6 +24,12 @@ public class PlayFabManager : MonoBehaviour
     [Header("User Info")]
     [SerializeField] private TMP_Text userDisplayNameText;
 
+    //Profile Display
+    private readonly float profilePicWidth = 100;
+    private readonly float profilePicHeigth = 100;
+    private readonly Sprite usserProfilePictureSprite;
+
+
     private string userDisplayName;
 
     private void Start()
@@ -36,8 +42,8 @@ public class PlayFabManager : MonoBehaviour
     }
     private void Update()
     {
-            Cursor.lockState = CursorLockMode.None;
-        
+        Cursor.lockState = CursorLockMode.None;
+
     }
 
     public void RegisterUser()
@@ -87,17 +93,27 @@ public class PlayFabManager : MonoBehaviour
         Debug.Log("SESION INICIADA CORRECTAMENTE");
     }
 
-    public void GetDisplayName()
+    public void GetPlayerProfile()
     {
-        var request = new GetPlayerProfileRequest();
-        PlayFabClientAPI.GetPlayerProfile(request,OnGetDisplayNameSucced,PlayfabErrorMessage);
+        var request = new GetPlayerProfileRequest()
+        {
+            ProfileConstraints = new PlayerProfileViewConstraints()
+            {
+                ShowDisplayName = true,
+                ShowAvatarUrl = true
+            }
+        };
+
+        PlayFabClientAPI.GetPlayerProfile(request, OnGetDisplayNameSucced, PlayfabErrorMessage);
     }
 
     private void OnGetDisplayNameSucced(GetPlayerProfileResult result)
     {
         userDisplayName = result.PlayerProfile.DisplayName;
-
         userDisplayNameText.text = userDisplayName;
+
+        string url = result.PlayerProfile.AvatarUrl;
+        Debug.Log(url);
     }
 
     private void PlayfabErrorMessage(PlayFabError error)
