@@ -3,14 +3,16 @@ using PlayFab.ClientModels;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayFabManager : MonoBehaviour
 {
     [Header("PLAYFAB SETTINGS")]
     [SerializeField] private string titleID = "3020F";
     [SerializeField]
-    private string secretKey = "ERSDCC7P8IQQGMYBWCB5OWT83UHCOIRTJT1YFIOAI8ABA3HNRR"
-;
+    private string secretKey = "ERSDCC7P8IQQGMYBWCB5OWT83UHCOIRTJT1YFIOAI8ABA3HNRR";
+
+
 
     [Header("Create Account Inputs")]
     [SerializeField] private TMP_InputField newUsernameInput;
@@ -23,6 +25,8 @@ public class PlayFabManager : MonoBehaviour
 
     [Header("User Info")]
     [SerializeField] private TMP_Text userDisplayNameText;
+    [SerializeField] private Image userProfilePicture;
+
 
     //Profile Display
     private readonly float profilePicWidth = 100;
