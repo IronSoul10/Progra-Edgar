@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
 
         isgrounded = Physics.CheckSphere(groundCheck.position, boxRadio, groundMask);
         if (isgrounded && velocity.y < 0) 
