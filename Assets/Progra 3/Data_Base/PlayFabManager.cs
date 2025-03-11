@@ -34,24 +34,20 @@ public class PlayFabManager : MonoBehaviour
 
     private void Start()
     {
-        if (string.IsNullOrEmpty(PlayFabSettings.TitleId))
-        {
-            PlayFabSettings.TitleId = titleID;
-            PlayFabSettings.DeveloperSecretKey = secretKey;
-        }
-    }
-    private void Update()
-    {
-        Cursor.lockState = CursorLockMode.None;
-
-    }
-
-    public void RegisterUser()
-    {
         if (string.IsNullOrEmpty(PlayFabSettings.TitleId) || string.IsNullOrEmpty(PlayFabSettings.DeveloperSecretKey))
         {
             PlayFabSettings.TitleId = titleID;
             PlayFabSettings.DeveloperSecretKey = secretKey;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void RegisterUser()
+    {
+        if (string.IsNullOrEmpty(newUsernameInput.text) || string.IsNullOrEmpty(setPasswordInput.text))
+        {
+            Debug.LogWarning("Alguno de los campos esta vacion");
+            return;
         }
 
         var request = new RegisterPlayFabUserRequest()
@@ -63,6 +59,7 @@ public class PlayFabManager : MonoBehaviour
         };
 
         PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSucces, PlayfabErrorMessage);
+
 
     }
 
@@ -91,29 +88,31 @@ public class PlayFabManager : MonoBehaviour
     private void OnLoginSucces(LoginResult result)
     {
         Debug.Log("SESION INICIADA CORRECTAMENTE");
+        onLogin?.Invoke();
     }
 
     public void GetPlayerProfile()
     {
         var request = new GetPlayerProfileRequest()
         {
-            ProfileConstraints = new PlayerProfileViewConstraints()
+            ProfileConstraints = new PlayerProfileViewConstraints
             {
+                ShowAvatarUrl = true,
                 ShowDisplayName = true,
-                ShowAvatarUrl = true
             }
         };
-
-        PlayFabClientAPI.GetPlayerProfile(request, OnGetDisplayNameSucced, PlayfabErrorMessage);
+        PlayFabClientAPI.GetPlayerProfile(request, OnGetDisplayNameSucces, PlayfabErrorMessage);
     }
 
-    private void OnGetDisplayNameSucced(GetPlayerProfileResult result)
+    private void OnGetDisplayNameSucces(GetPlayerProfileResult result)
     {
         userDisplayName = result.PlayerProfile.DisplayName;
-        userDisplayNameText.text = userDisplayName;
+
+        userDisplayNameText.text += userDisplayName;
 
         string url = result.PlayerProfile.AvatarUrl;
-        Debug.Log(url);
+        Debug.Log($"{url}");
+
     }
 
     private void PlayfabErrorMessage(PlayFabError error)
