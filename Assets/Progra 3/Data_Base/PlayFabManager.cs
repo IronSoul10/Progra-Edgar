@@ -1,6 +1,5 @@
 using PlayFab;
 using PlayFab.ClientModels;
-using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -28,6 +27,11 @@ public class PlayFabManager : MonoBehaviour
     [SerializeField] private TMP_Text userDisplayNameText;
     [SerializeField] private Image userProfilePicture;
 
+    //Image Profile
+    private Texture2D avatarTexture;
+    private Sprite avatarSprite;
+    private float avatarWidth = 100;
+    private float avatarHeight = 100;
 
     private string userDisplayName;
 
@@ -99,13 +103,13 @@ public class PlayFabManager : MonoBehaviour
                 ShowDisplayName = true
             }
         };
-        PlayFabClientAPI.GetPlayerProfile(request, OnGetDisplayNameSucces, PlayfabErrorMessage);
+        PlayFabClientAPI.GetPlayerProfile(request, OnGetProfileInfoSucces, PlayfabErrorMessage);
     }
 
     private IEnumerator ShowAvatar(string avatarUrl)
     {
         // Verifica si la URL es válida
-        if (string.IsNullOrEmpty(avatarUrl) || !Uri.IsWellFormedUriString(avatarUrl, UriKind.Absolute))
+        if (string.IsNullOrEmpty(avatarUrl))
         {
             Debug.LogWarning("URL de avatar no válida: " + avatarUrl);
             yield break;
@@ -113,15 +117,15 @@ public class PlayFabManager : MonoBehaviour
 
         UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(avatarUrl);
 
+
         yield return webRequest.SendWebRequest();
 
         if (webRequest.result == UnityWebRequest.Result.Success)
         {
-            Texture2D avatarTexture = ((DownloadHandlerTexture)webRequest.downloadHandler).texture;
-            Sprite avatarImage = Sprite.Create(avatarTexture, new Rect(0, 0, avatarTexture.width, avatarTexture.height), new Vector2(0.5f, 0.5f));
-            userProfilePicture.sprite = avatarImage;
-            userProfilePicture.preserveAspect = true;
-            userProfilePicture.rectTransform.sizeDelta = new Vector2(100, 100); // Establece el tamaño de la imagen a 100x100 píxeles
+            avatarTexture = ((DownloadHandlerTexture)webRequest.downloadHandler).texture;
+            avatarSprite = Sprite.Create(avatarTexture, new Rect(0, 0, avatarTexture.width, avatarTexture.height), new Vector2(0.5f, 0.5f));
+            userProfilePicture.sprite = avatarSprite;
+            userProfilePicture.rectTransform.sizeDelta = new Vector2(avatarWidth, avatarHeight); // Establece el tamaño de la imagen a 100x100 píxeles
             Debug.Log("Avatar obtenido correctamente de la API.");
         }
         else
@@ -130,13 +134,13 @@ public class PlayFabManager : MonoBehaviour
         }
     }
 
-    private void OnGetDisplayNameSucces(GetPlayerProfileResult result)
+    private void OnGetProfileInfoSucces(GetPlayerProfileResult result) // Consigue la informacion del usuario
     {
         userDisplayName = result.PlayerProfile.DisplayName;
         userDisplayNameText.text = userDisplayName;
 
         string avatarUrl = result.PlayerProfile.AvatarUrl;
-        Debug.Log("Avatar URL: " + avatarUrl); // Imprime la URL en la consola para depuración
+        Debug.Log("Descargando Avatar URL: " + avatarUrl); // Imprime la URL en la consola para depuración
         StartCoroutine(ShowAvatar(avatarUrl));
     }
 
