@@ -1,8 +1,11 @@
 using PlayFab;
 using PlayFab.ClientModels;
+using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class PlayFabManager : MonoBehaviour
@@ -11,8 +14,6 @@ public class PlayFabManager : MonoBehaviour
     [SerializeField] private string titleID = "3020F";
     [SerializeField]
     private string secretKey = "ERSDCC7P8IQQGMYBWCB5OWT83UHCOIRTJT1YFIOAI8ABA3HNRR";
-
-
 
     [Header("Create Account Inputs")]
     [SerializeField] private TMP_InputField newUsernameInput;
@@ -26,12 +27,6 @@ public class PlayFabManager : MonoBehaviour
     [Header("User Info")]
     [SerializeField] private TMP_Text userDisplayNameText;
     [SerializeField] private Image userProfilePicture;
-
-
-    //Profile Display
-    private readonly float profilePicWidth = 100;
-    private readonly float profilePicHeigth = 100;
-    private readonly Sprite usserProfilePictureSprite;
 
 
     private string userDisplayName;
@@ -63,8 +58,6 @@ public class PlayFabManager : MonoBehaviour
         };
 
         PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSucces, PlayfabErrorMessage);
-
-
     }
 
     private void OnRegisterSucces(RegisterPlayFabUserResult result)
@@ -93,35 +86,62 @@ public class PlayFabManager : MonoBehaviour
     {
         Debug.Log("SESION INICIADA CORRECTAMENTE");
         onLogin?.Invoke();
+        GetPlayerProfile(); // Obtiene el perfil del jugador después de iniciar sesión
     }
 
     public void GetPlayerProfile()
     {
         var request = new GetPlayerProfileRequest()
         {
-            ProfileConstraints = new PlayerProfileViewConstraints
+            ProfileConstraints = new PlayerProfileViewConstraints()
             {
                 ShowAvatarUrl = true,
-                ShowDisplayName = true,
+                ShowDisplayName = true
             }
         };
         PlayFabClientAPI.GetPlayerProfile(request, OnGetDisplayNameSucces, PlayfabErrorMessage);
     }
 
+    private IEnumerator ShowAvatar(string avatarUrl)
+    {
+        // Verifica si la URL es válida
+        if (string.IsNullOrEmpty(avatarUrl) || !Uri.IsWellFormedUriString(avatarUrl, UriKind.Absolute))
+        {
+            Debug.LogWarning("URL de avatar no válida: " + avatarUrl);
+            yield break;
+        }
+
+        UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(avatarUrl);
+
+        yield return webRequest.SendWebRequest();
+
+        if (webRequest.result == UnityWebRequest.Result.Success)
+        {
+            Texture2D avatarTexture = ((DownloadHandlerTexture)webRequest.downloadHandler).texture;
+            Sprite avatarImage = Sprite.Create(avatarTexture, new Rect(0, 0, avatarTexture.width, avatarTexture.height), new Vector2(0.5f, 0.5f));
+            userProfilePicture.sprite = avatarImage;
+            userProfilePicture.preserveAspect = true;
+            userProfilePicture.rectTransform.sizeDelta = new Vector2(100, 100); // Establece el tamaño de la imagen a 100x100 píxeles
+            Debug.Log("Avatar obtenido correctamente de la API.");
+        }
+        else
+        {
+            Debug.Log("Error al obtener el avatar: " + webRequest.error);
+        }
+    }
+
     private void OnGetDisplayNameSucces(GetPlayerProfileResult result)
     {
         userDisplayName = result.PlayerProfile.DisplayName;
+        userDisplayNameText.text = userDisplayName;
 
-        userDisplayNameText.text += userDisplayName;
-
-        string url = result.PlayerProfile.AvatarUrl;
-        Debug.Log($"{url}");
-
+        string avatarUrl = result.PlayerProfile.AvatarUrl;
+        Debug.Log("Avatar URL: " + avatarUrl); // Imprime la URL en la consola para depuración
+        StartCoroutine(ShowAvatar(avatarUrl));
     }
 
     private void PlayfabErrorMessage(PlayFabError error)
     {
         Debug.LogWarning(error.ErrorMessage);
     }
-
 }
