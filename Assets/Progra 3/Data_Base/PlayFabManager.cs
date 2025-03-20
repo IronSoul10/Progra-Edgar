@@ -1,6 +1,7 @@
 using PlayFab;
 using PlayFab.ClientModels;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -144,6 +145,26 @@ public class PlayFabManager : MonoBehaviour
         StartCoroutine(ShowAvatar(avatarUrl));
     }
 
+    public void UpdateLeaderBoard(string leaderboard, int value)
+    {
+        var request = new UpdatePlayerStatisticsRequest()
+        {
+            Statistics = new List<StatisticUpdate>()
+            {
+                new StatisticUpdate()
+                {
+                    StatisticName = leaderboard,
+                    Value = value
+                }
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderUpdateSuccess, PlayfabErrorMessage);
+    }
+
+    private void OnLeaderUpdateSuccess(UpdatePlayerStatisticsResult result)
+    {
+        Debug.Log("Se actualizo el leaderboard correctamente");
+    }
     private void PlayfabErrorMessage(PlayFabError error)
     {
         Debug.LogWarning(error.ErrorMessage);
