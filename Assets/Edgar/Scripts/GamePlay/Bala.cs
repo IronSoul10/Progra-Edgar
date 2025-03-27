@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    ContadorBajas numeroBajas;
 
     private void Start()
     {
-        numeroBajas = FindAnyObjectByType<ContadorBajas>();
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemigo"))
+        if (collision.gameObject.CompareTag("Target"))
         {
-            numeroBajas.BajasActuales();
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }

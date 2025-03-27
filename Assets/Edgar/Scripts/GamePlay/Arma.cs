@@ -35,7 +35,7 @@ public class Arma : MonoBehaviour
     }
     bool JalaGatillo()
     {
-        return Input.GetKeyDown(KeyCode.Mouse1);
+        return Input.GetKey(KeyCode.Mouse0);
     }
 
     public void Disparar()

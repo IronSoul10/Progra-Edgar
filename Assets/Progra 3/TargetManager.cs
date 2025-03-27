@@ -1,10 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class TargetManager : MonoBehaviour
 {
     [SerializeField] private int targetCount;
     [SerializeField] private GameObject[] item;
-   // [SerializeField] public bool levelComplete = false;
+    [SerializeField] public TextMeshProUGUI targetDestroy;
+    // [SerializeField] public bool levelComplete = false;
 
     private void Start()
     {
@@ -22,6 +24,7 @@ public class TargetManager : MonoBehaviour
     public void IncrementTargetCount()
     {
         targetCount++;
+        targetDestroy.text = targetCount.ToString();
     }
 
     void UnlockItem()

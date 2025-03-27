@@ -5,30 +5,30 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject enemigoPrefab;
-    private Vector3 puntoInicio;
+    public Transform puntoInicio; // Cambiado a público para asignar en el Inspector
     public float velEnemigo;
     bool spawnActivo = true;
+    [SerializeField] private float posicionZ;
 
-   
-   // [HideInInspector]
+    // [HideInInspector]
     public Vector3 rotacion;
 
     void Update()
     {
         SpawnEnemigo();
     }
+
     void SpawnEnemigo()
     {
         if (spawnActivo)
         {
-            float posicionX= Random.Range(-20f, 20f); //spawn random en un rango
-            puntoInicio = new Vector3(posicionX, 0, 0);
+            float randomZ = Random.Range(-posicionZ, posicionZ);
+            Vector3 spawnPosition = new Vector3(puntoInicio.localPosition.x, puntoInicio.localPosition.y, puntoInicio.localPosition.z + randomZ);
 
-            Quaternion rotacionQuaternion = Quaternion.Euler(rotacion);
-            GameObject clone = Instantiate(enemigoPrefab, puntoInicio, Quaternion.identity);
+            GameObject clone = Instantiate(enemigoPrefab, spawnPosition, Quaternion.identity);
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             rb.AddForce(Vector3.forward * velEnemigo);
-            Destroy(clone, 150f);
+            Destroy(clone,2f);
             StartCoroutine(ColdDown());
         }
     }
@@ -36,7 +36,7 @@ public class SpawnEnemy : MonoBehaviour
     IEnumerator ColdDown()
     {
         spawnActivo = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         spawnActivo = true;
     }
 }
