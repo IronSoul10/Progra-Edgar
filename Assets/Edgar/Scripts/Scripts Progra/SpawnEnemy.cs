@@ -25,7 +25,7 @@ public class SpawnEnemy : MonoBehaviour
             puntoInicio = new Vector3(posicionX, 0, 0);
 
             Quaternion rotacionQuaternion = Quaternion.Euler(rotacion);
-            GameObject clone = Instantiate(enemigoPrefab, puntoInicio, rotacionQuaternion);
+            GameObject clone = Instantiate(enemigoPrefab, puntoInicio, Quaternion.identity);
             Rigidbody rb = clone.GetComponent<Rigidbody>();
             rb.AddForce(Vector3.forward * velEnemigo);
             Destroy(clone, 150f);

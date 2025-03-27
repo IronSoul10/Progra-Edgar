@@ -76,16 +76,16 @@ namespace Door
 
         private void Evento()
         {
-            if (targetManager.levelComplete == true)
-            {
-                eventoActivado = true;
-                Debug.Log("Se ha activado el evento");
-                StartCoroutine(NormalOpen());
-            }
-            else
-            {
-                Debug.Log("No se ha activado el evento");
-            }
+            //if (targetManager.levelComplete == true)
+            //{
+            //    eventoActivado = true;
+            //    Debug.Log("Se ha activado el evento");
+            //    StartCoroutine(NormalOpen());
+            //}
+            //else
+            //{
+            //    Debug.Log("No se ha activado el evento");
+            //}
         }
 
         private void MultiplesLlaves()

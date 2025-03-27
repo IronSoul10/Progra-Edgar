@@ -4,19 +4,19 @@ public class TargetManager : MonoBehaviour
 {
     [SerializeField] private int targetCount;
     [SerializeField] private GameObject[] item;
-    [SerializeField] public bool levelComplete = false;
+   // [SerializeField] public bool levelComplete = false;
 
     private void Start()
     {
-        foreach (GameObject item in item)
-        {
-            item.SetActive(false);
-        }
+    //    foreach (GameObject item in item)
+    //    {
+    //        item.SetActive(false);
+    //    }
     }
 
     private void Update()
     {
-        UnlockItem();
+       // UnlockItem();
     }
 
     public void IncrementTargetCount()
@@ -53,7 +53,7 @@ public class TargetManager : MonoBehaviour
                 item[7].SetActive(true);
                 break;
             case 45:
-                levelComplete = true;
+                //levelComplete = true;
                 item[8].SetActive(true);
                 break;
         }

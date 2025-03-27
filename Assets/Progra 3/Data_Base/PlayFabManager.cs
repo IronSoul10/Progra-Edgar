@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System;
 
 public class PlayFabManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class PlayFabManager : MonoBehaviour
     [Header("User Info")]
     [SerializeField] private TMP_Text userDisplayNameText;
     [SerializeField] private Image userProfilePicture;
+
+    [Header("Leaderboard")]
+    [SerializeField] private TextMeshProUGUI userNameLeaderboard;
+    [SerializeField] private TextMeshProUGUI userScoreLeaderboard;
 
     //Image Profile
     private Texture2D avatarTexture;
@@ -164,6 +169,26 @@ public class PlayFabManager : MonoBehaviour
     private void OnLeaderUpdateSuccess(UpdatePlayerStatisticsResult result)
     {
         Debug.Log("Se actualizo el leaderboard correctamente");
+    }
+
+    public void RequestLeaderboard() // Obtiene la tabla de clasificación
+    {
+        PlayFabClientAPI.GetLeaderboard(new GetLeaderboardRequest
+        {
+            StatisticName = "HighScore",
+            StartPosition = 0,
+            MaxResultsCount = 10
+        }, result => DisplayLeaderboard(result), PlayfabErrorMessage);
+    }
+
+    private void DisplayLeaderboard(GetLeaderboardResult result) // Muestra la tabla de clasificación en la consola
+    {
+        foreach (var score in result.Leaderboard) // Recorre la lista de jugadores en la tabla de clasificación
+        {
+            userNameLeaderboard.text = score.DisplayName;
+            userScoreLeaderboard.text = score.StatValue.ToString();
+            Debug.Log($"Nombre: {score.DisplayName}, Puntuación: {score.StatValue}");
+        }
     }
     private void PlayfabErrorMessage(PlayFabError error)
     {
