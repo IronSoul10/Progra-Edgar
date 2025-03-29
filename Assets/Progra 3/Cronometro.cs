@@ -15,7 +15,7 @@ public class Cronometro : MonoBehaviour
         tiempoRestante = tiempoInicial;
         enMarcha = true;
         ActualizarCronometro(tiempoRestante);
-        Cursor.lockState = CursorLockMode.Locked;
+       
     }
 
   
@@ -29,7 +29,6 @@ public class Cronometro : MonoBehaviour
                 tiempoRestante = 0;
                 enMarcha = false;
                 CanvasLeaderBoard.SetActive(true); //realizar cuando el tiempo llegue a cero
-                Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
             }
             ActualizarCronometro(tiempoRestante);

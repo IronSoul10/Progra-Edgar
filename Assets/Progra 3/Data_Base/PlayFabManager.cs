@@ -48,9 +48,21 @@ public class PlayFabManager : MonoBehaviour
             PlayFabSettings.TitleId = titleID;
             PlayFabSettings.DeveloperSecretKey = secretKey;
             Cursor.lockState = CursorLockMode.None;
+            Pause();
         }
     }
-
+    private void Update()
+    {
+        Resume();
+    }
+    void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    void Resume()
+    {
+        Time.timeScale = 1;
+    }
     public void RegisterUser()
     {
         if (string.IsNullOrEmpty(newUsernameInput.text) || string.IsNullOrEmpty(setPasswordInput.text))
@@ -97,6 +109,8 @@ public class PlayFabManager : MonoBehaviour
         Debug.Log("SESION INICIADA CORRECTAMENTE");
         onLogin?.Invoke();
         GetPlayerProfile(); // Obtiene el perfil del jugador después de iniciar sesión
+        Resume();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void GetPlayerProfile()
