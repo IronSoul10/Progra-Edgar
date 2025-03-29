@@ -3,20 +3,22 @@ using UnityEngine;
 
 public class Cronometro : MonoBehaviour
 {
+    [SerializeField] private bool enMarcha;
     public TextMeshProUGUI cronometroTexto; // Referencia al componente de texto en el canvas
     public float tiempoInicial = 60f; // Tiempo inicial en segundos
     private float tiempoRestante;
-    [SerializeField] private bool enMarcha;
+    [SerializeField] private GameObject CanvasLeaderBoard;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         tiempoRestante = tiempoInicial;
-        enMarcha = false;
+        enMarcha = true;
         ActualizarCronometro(tiempoRestante);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         if (enMarcha)
@@ -26,20 +28,12 @@ public class Cronometro : MonoBehaviour
             {
                 tiempoRestante = 0;
                 enMarcha = false;
-                //  realizar cuando el tiempo llegue a cero
+                CanvasLeaderBoard.SetActive(true); //realizar cuando el tiempo llegue a cero
+                Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = 0;
             }
             ActualizarCronometro(tiempoRestante);
         }
-    }
-
-    public void IniciarCronometro()
-    {
-        enMarcha = true;
-    }
-
-    public void DetenerCronometro()
-    {
-        enMarcha = false;
     }
 
     public void ReiniciarCronometro()
@@ -51,9 +45,9 @@ public class Cronometro : MonoBehaviour
 
     private void ActualizarCronometro(float tiempo)
     {
-        int minutos = Mathf.FloorToInt(tiempo / 60F);
-        int segundos = Mathf.FloorToInt(tiempo % 60F);
+        int minutos = Mathf.FloorToInt(tiempo / 60F); // Dividir el tiempo en minutos
+        int segundos = Mathf.FloorToInt(tiempo % 60F); 
         int milisegundos = Mathf.FloorToInt((tiempo * 100F) % 100F);
-        cronometroTexto.text = string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos);
+        cronometroTexto.text = string.Format("{0:00}:{1:00}:{2:00}", minutos, segundos, milisegundos); 
     }
 }

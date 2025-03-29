@@ -1,7 +1,4 @@
 using UnityEngine;
-using static UnityEngine.UI.Image;
-using UnityEngine.UIElements;
-
 
 public class Arma : MonoBehaviour
 {
@@ -48,7 +45,7 @@ public class Arma : MonoBehaviour
             rb.AddForce(puntoTiro.forward * velocidadBala, ForceMode.Impulse);
             Destroy(clone, 3);
             municionActual--;
-            ActualizarHUD();
+           // ActualizarHUD();
         }
         if (municionActual <= 0)
         {
@@ -62,10 +59,10 @@ public class Arma : MonoBehaviour
         municionActual = 100;
 
     }
-    public void ActualizarHUD()
-    {
-        contador.ActualizarContadorArma1(municionActual);
-    }
+    //public void ActualizarHUD()
+    //{
+    //    contador.ActualizarContadorArma1(municionActual);
+    //}
    
 }
   
